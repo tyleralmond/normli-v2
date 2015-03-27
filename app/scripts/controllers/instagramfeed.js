@@ -20,7 +20,7 @@ angular.module('normliV2App')
     $scope.getMore = function(){
       instagram.mostRecent(payload,
         function success(response){
-          if(response.pagaination){
+          if(response.pagination){
           payload.max_id = response.pagination.next_max_id || null;
           }
           angular.forEach(response.data,function(item){
