@@ -1,5 +1,11 @@
-<div ng-controller="instagramFeed">
+<div ng-controller="InstagramfeedCtrl">
 
+
+  <form ng-submit="search()">
+    <label for="search">Search</label>
+    <input id="search" type="search" ng-model="searchTerm"/>
+    <button type="submit">Search</button>
+  </form>
   <ul class="list">
     <li ng-repeat="p in pics">
       <a href="{{p.link}}" target="_blank"><img ng-src="{{p.images.standard_resolution.url}}" /></a>
@@ -8,5 +14,10 @@
       <p>{{p.comments.count}}</p>
     </li>
   </ul>
+  <button ng-click="getMore()" type="button" ng-show="showMore">Load More</button>
+  <div class="panel">
+    <h2>No results found</h2>
+  </div>
+
 
 </div>
