@@ -27,6 +27,20 @@ module.exports = function (grunt) {
     // Project settings
     yeoman: appConfig,
 
+  // ng-annotate tries to make the code safe for minification automatically
+  // by using the Angular long form for dependency injection.
+  ngAnnotate: {
+    dist: {
+      files: [{
+        expand: true,
+        cwd: '.tmp/concat/scripts',
+        src: ['*.js', '!oldieshim.js'],
+        dest: '.tmp/concat/scripts'
+      }]
+    }
+  },
+
+
     // Watches files for changes and runs tasks based on the changed files
     watch: {
       bower: {
@@ -310,20 +324,6 @@ module.exports = function (grunt) {
       }
     },
 
-    // ngmin tries to make the code safe for minification automatically by
-    // using the Angular long form for dependency injection. It doesn't work on
-    // things like resolve or inject so those have to be done manually.
-    ngmin: {
-      dist: {
-        files: [{
-          expand: true,
-          cwd: '.tmp/concat/scripts',
-          src: '*.js',
-          dest: '.tmp/concat/scripts'
-        }]
-      }
-    },
-
     // Replace Google CDN references
     cdnify: {
       dist: {
@@ -422,7 +422,7 @@ module.exports = function (grunt) {
     'concurrent:dist',
     'autoprefixer',
     'concat',
-    'ngmin',
+    'ngAnnotate',
     'copy:dist',
     'cdnify',
     'cssmin',
