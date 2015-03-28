@@ -10,7 +10,7 @@
 angular.module('normliV2App')
   .controller('InstagramfeedCtrl', function ($scope,instagram,$log) {
     var payload = {
-      count:30
+      count: 20
     };
 
     $scope.pics =[];
@@ -33,9 +33,9 @@ angular.module('normliV2App')
           });
           //todo: Somehow filter server side so we know if there are more
           $scope.showMore=$scope.pics.length>0;
-          $log.debug("show more: ",$scope.showMore);
+          $log.debug('show more: ',$scope.showMore);
 
-          $log.warn(response)
+          $log.warn(response);
         },
         function error(error){
           throw new Error(error);
