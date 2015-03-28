@@ -15,7 +15,8 @@
     </li>
   </ul>
   <button ng-click="getMore()" type="button" ng-show="showMore">Load More</button>
-  <div class="panel">
+  
+  <div ng-hide="pics.length">
     <h2>No results found</h2>
   </div>
 
