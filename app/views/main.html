@@ -1,34 +1,52 @@
 <div ng-controller="InstagramfeedCtrl">
 
+  <section class="clear">
 
-  <!-- Search -->
-  <form ng-submit="search()">
-    <label for="search">Search</label>
-    <input id="search" type="search" ng-model="searchTerm"/>
-    <button type="submit">Search</button>
-  </form>
+    <div class="g-wide--half">
 
-  <!-- no search results msg -->
-  <div ng-hide="pics.length">
-    <h2>No results found</h2>
-  </div>
+      <img src="images/normli-logo.svg" alt="Norm Li logo">
+      
+      <!-- Search -->
+      <form class="instagram-search" ng-submit="search()">
+        <!-- <label for="search">Search #hash tag</label> -->
+        <input class="instagram-search__input" placeholder="SEARCH #HASH TAG" id="search" type="search" ng-model="searchTerm"/>
+        <button class="instagram-search__button" type="submit">Search</button>
+      </form>
+
+    </div>
+
+    <div class="g-wide--half g--last">
+      <img src="images/hero.jpg" alt="Norm Li logo">
+    </div>
+
+  </section>
 
 
-  <!-- Instagram feed -->
-  <ul class="instagram-feed">
-    <li class="instagram-feed__item" ng-repeat="p in pics">    
-      <img ng-src="{{p.images.standard_resolution.url}}"/>      
-      <div class="instagram-feed__item-hover">
-        <p class="instagram-feed__text">{{p.caption.text}}</p>
-        <p class="instagram-feed__text">{{p.likes.count}}</p>
-        <p class="instagram-feed__text">{{p.comments.count}}</p>
-        <a class="instagram-feed__link" href="{{p.link}}" target="_blank">View on Instagram</a>
-      </div>
-    </li>
-  </ul>
+  <!-- INSTAGRAM FEED -->
+  <section>
 
-  <!-- Instagram load more -->
-  <button ng-click="getMore()" type="button" ng-show="showMore">Load More</button>  
+    <!-- no search results msg -->
+    <div ng-hide="pics.length">
+      <h2>No results found</h2>
+    </div>
 
+
+    <!-- Instagram feed -->
+    <ul class="instagram-feed">
+      <li class="instagram-feed__item" ng-repeat="p in pics">    
+        <img class="instagram-feed__img" ng-src="{{p.images.standard_resolution.url}}"/>      
+        <div class="instagram-feed__item-hover">
+          <p class="instagram-feed__text">{{p.caption.text}}</p>
+          <p class="instagram-feed__text">{{p.likes.count}}</p>
+          <p class="instagram-feed__text">{{p.comments.count}}</p>
+          <a class="instagram-feed__link" href="{{p.link}}" target="_blank">View on Instagram</a>
+        </div>
+      </li>
+    </ul>
+
+    <!-- Instagram load more -->
+    <button ng-click="getMore()" type="button" ng-show="showMore">Load More</button>  
+
+  </section>
 
 </div>
