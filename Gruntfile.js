@@ -40,7 +40,12 @@ module.exports = function (grunt) {
     }
   },
 
-
+    uglify: {
+      options: {
+        mangle: true,
+        compress : true
+      }
+    },
     // Watches files for changes and runs tasks based on the changed files
     watch: {
       bower: {
@@ -345,7 +350,8 @@ module.exports = function (grunt) {
             '*.html',
             'views/{,*/}*.html',
             'images/{,*/}*.{webp}',
-            'fonts/*'
+            'fonts/*',
+			'images/icons/**'
           ]
         }, {
           expand: true,
@@ -434,7 +440,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('default', [
     'newer:jshint',
-    'test',
+  //  'test',
     'build'
   ]);
 };
