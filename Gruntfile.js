@@ -82,7 +82,7 @@ module.exports = function (grunt) {
       options: {
         port: 9000,
         // Change this to '0.0.0.0' to access the server from outside.
-        hostname: '0.0.0.0',
+        hostname: 'localhost',
         livereload: 35729
       },
       livereload: {
@@ -128,8 +128,7 @@ module.exports = function (grunt) {
     jshint: {
       options: {
         jshintrc: '.jshintrc',
-        reporter: require('jshint-stylish'),
-        force: true
+        reporter: require('jshint-stylish')
       },
       all: {
         src: [
@@ -376,15 +375,15 @@ module.exports = function (grunt) {
         'imagemin',
         'svgmin'
       ]
-    }
+    },
 
     // Test settings
-    // karma: {
-    //   unit: {
-    //     configFile: 'test/karma.conf.js',
-    //     singleRun: true
-    //   }
-    // }
+    karma: {
+      unit: {
+        configFile: 'test/karma.conf.js',
+        singleRun: true
+      }
+    }
   });
 
 
@@ -412,8 +411,8 @@ module.exports = function (grunt) {
     'clean:server',
     'concurrent:test',
     'autoprefixer',
-    'connect:test'
-    // 'karma'
+    'connect:test',
+    'karma'
   ]);
 
   grunt.registerTask('build', [
