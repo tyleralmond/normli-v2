@@ -172,7 +172,7 @@ button {
 }
 
 .hero--left {
-  padding: $lineHeight;
+  padding: $lineHeight*2;
 }
 
 .hero--right {
@@ -181,9 +181,17 @@ button {
   background-attachment: fixed;  
 }
 
+.hero__logo {
+  max-width: 500px;
+}
+
+.instagram-search {
+  margin-top: $lineHeight*3;
+}
+
 .instagram-search__input {
-  width: 50%;
-  margin-top: $lineHeight*2;
+  width: 75%;
+  max-width: 500px; 
   padding: 5px;
   background: #333;
   border: none;
@@ -240,13 +248,13 @@ button {
   transition: 150ms $animationEasing;
 
   .instagram-feed__item:hover & {
-    transition: 7s $animationEasing;
-    transform: scale(1.15);
+    // transition: 7s $animationEasing;
+    transform: scale(1.05);
   }
 
 }
 
-//hover
+//caption & count hover
 
 .instagram-feed__item-hover {
   position: absolute;
@@ -256,11 +264,21 @@ button {
   left: 0;
   right: 0;
   padding: $lineHeight/2;
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(0, 0, 0, 0.9);
   transition: 150ms $animationEasing;
 
   &:hover {
     opacity: 1;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: 85px;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 52%,rgba(0,0,0,1) 100%);;
   }
 
 }
@@ -279,6 +297,10 @@ button {
 }
 
 .instagram-feed__link {
+  z-index: 2;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
   color: $color-primary;
 
   &:visited {
@@ -288,9 +310,10 @@ button {
 }
 
 .instagram-feed__count {
+  z-index: 2;
   position: absolute;
   bottom: 10px;
-  text-align: center;
+  right: 10px;
   opacity: 0;
   transform: translate3d(0, 25px, 0);
   transition: 150ms $animationEasing;
@@ -302,16 +325,13 @@ button {
 
   p {
     padding: 0;
+    display: inline-block;
   }
 
-}
+  img {
+    display: inline-block;
+  }
 
-.instagram-feed__count--left {
-  left: 10px;
-}
-
-.instagram-feed__count--right {
-  right: 10px;
 }
 
 

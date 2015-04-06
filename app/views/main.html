@@ -4,7 +4,7 @@
   <section class="hero-wrap clear">
 
     <div class="hero hero--left">
-      <img src="images/normli-logo.svg" alt="Norm Li logo">
+      <img class="hero__logo" src="images/normli-logo.svg" alt="Norm Li logo">
       <!-- search instgram hash -->
       <form class="instagram-search" ng-submit="search()">
         <img src="images/search.svg" alt="search icon">
@@ -39,15 +39,13 @@
           <p class="instagram-feed__text">{{p.caption.text}}</p>
           <!-- instagram link -->
           <a class="instagram-feed__link" href="{{p.link}}" target="_blank">View on Instagram</a>   
-          <!-- likes -->
-          <div class="instagram-feed__count instagram-feed__count--left">          
-            <img src="images/likes.svg" alt="likes icon">
-            <p>{{p.likes.count}}</p>            
-          </div>
-          <!-- comments -->
-          <div class="instagram-feed__count instagram-feed__count--right">
-            <img src="images/comments.svg" alt="likes comments">
-            <p>{{p.comments.count}}</p>            
+          <div class="instagram-feed__count">
+            <!-- likes -->     
+              <img src="images/likes.svg" alt="likes icon">
+              <p>{{p.likes.count}}</p>            
+            <!-- comments -->
+              <img src="images/comments.svg" alt="likes comments">
+              <p>{{p.comments.count}}</p>            
           </div>
         </div>
       </li>
