@@ -1,22 +1,21 @@
 <div ng-controller="InstagramfeedCtrl">
 
-  <section class="hero clear">
+  <!-- HERO -->
+  <section class="hero-wrap clear">
 
-    <div class="logo-wrap g-wide--half">
-
+    <div class="hero hero--left">
       <img src="images/normli-logo.svg" alt="Norm Li logo">
-      
-      <!-- Search -->
+      <!-- search instgram hash -->
       <form class="instagram-search" ng-submit="search()">
-        <!-- <label for="search">Search #hash tag</label> -->
+        <img src="images/search.svg" alt="search icon">
+        <label class="visuallyhidden" for="search">Search our instagram hash tag</label>
         <input class="instagram-search__input" placeholder="SEARCH #HASH TAG" id="search" type="search" ng-model="searchTerm"/>
-        <button class="instagram-search__button" type="submit">Search</button>
+        <!-- <button class="instagram-search__button" type="submit">Search</button> -->        
       </form>
-
     </div>
 
-    <div class="g-wide--half g--last  hero-left">
-      <!-- <img src="images/hero.jpg" alt="Norm Li logo"> -->
+    <div class="hero hero--right">
+      <!-- <img src="images/hero.jpg" alt=""> -->
     </div>
 
   </section>
@@ -36,16 +35,26 @@
       <li class="instagram-feed__item" ng-repeat="p in pics">    
         <img class="instagram-feed__img" ng-src="{{p.images.standard_resolution.url}}"/>      
         <div class="instagram-feed__item-hover">
+          <!-- caption -->
           <p class="instagram-feed__text">{{p.caption.text}}</p>
-          <p class="instagram-feed__text">{{p.likes.count}}</p>
-          <p class="instagram-feed__text">{{p.comments.count}}</p>
-          <a class="instagram-feed__link" href="{{p.link}}" target="_blank">View on Instagram</a>
+          <!-- instagram link -->
+          <a class="instagram-feed__link" href="{{p.link}}" target="_blank">View on Instagram</a>   
+          <!-- likes -->
+          <div class="instagram-feed__count instagram-feed__count--left">          
+            <img src="images/likes.svg" alt="likes icon">
+            <p>{{p.likes.count}}</p>            
+          </div>
+          <!-- comments -->
+          <div class="instagram-feed__count instagram-feed__count--right">
+            <img src="images/comments.svg" alt="likes comments">
+            <p>{{p.comments.count}}</p>            
+          </div>
         </div>
       </li>
     </ul>
 
     <!-- Instagram load more -->
-    <button ng-click="getMore()" type="button" ng-show="showMore">Load More</button>  
+    <button class="button--secondary" ng-click="getMore()" ng-show="showMore">Load More</button>  
 
   </section>
 
