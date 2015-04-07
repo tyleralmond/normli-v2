@@ -18,6 +18,7 @@
 \*------------------------------------*/
 
 $color-primary: #de1e26;
+$color-secondary: #fff0d4;
 $z-header: 2;
 
 
@@ -331,7 +332,7 @@ button {
     right: 10px;
     opacity: 0;
     transform: translate3d(0, 25px, 0);
-    transition: 150ms $animationEasing;
+    transition: 150ms $animationEasing 100ms;
 
     .instagram-feed__item:hover & {
       opacity: 1;
