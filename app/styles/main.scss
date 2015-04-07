@@ -61,7 +61,6 @@ button {
 
 
 
-
 /*------------------------------------*\
     #NGANIMATE
 \*------------------------------------*/
@@ -161,7 +160,8 @@ button {
   margin-top: 78px;
 }
 
-.hero {   
+.hero {
+  background: #333;   
 
   @include media-query(medium) {
     width: 50%;
@@ -172,13 +172,16 @@ button {
 }
 
 .hero--left {
+  // width: 66.666%;
   padding: $lineHeight*2;
 }
 
 .hero--right {
+  // width: 33.333%;
   background-image: url('../images/hero.jpg');
-  background-size: contain;
-  background-attachment: fixed;  
+  background-size: cover;
+  // background-attachment: fixed;
+  // box-shadow: inset 1px 4px 1px 0px rgba(0, 0, 0, 0.75);
 }
 
 .hero__logo {
@@ -334,6 +337,14 @@ button {
 
 }
 
+// load more button
+
+.loadmore-btn {
+  background: #222;
+  border-color: #ccc;
+  text-align: center;
+  transition: 150ms $animationEasing;
+}
 
 
 
