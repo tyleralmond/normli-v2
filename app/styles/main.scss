@@ -19,6 +19,7 @@
 
 $color-primary: #de1e26;
 $color-secondary: #fff0d4;
+$color-border: #999999;
 $z-header: 2;
 
 
@@ -53,6 +54,16 @@ body {
   background-color: #333;
   box-sizing: border-box;
   min-height: 100%;
+}
+
+a {
+  color: white;
+
+  &:hover,
+  &:visited {
+    color: white;
+  }
+
 }
 
 button {
@@ -140,7 +151,8 @@ button {
   }
 
   &:hover {
-    background-color: darken($color-primary, 5%);
+    color: white;
+    background-color: darken($color-primary, 10%);
   }
 
   &:visited {
@@ -332,7 +344,7 @@ button {
     right: 10px;
     opacity: 0;
     transform: translate3d(0, 25px, 0);
-    transition: 150ms $animationEasing 100ms;
+    transition: 150ms $animationEasing 50ms;
 
     .instagram-feed__item:hover & {
       opacity: 1;
@@ -361,7 +373,7 @@ button {
 .instagram-loadmore__btn {
   margin: $lineHeight*2 0;  
   background: #222;
-  border-color: #999;
+  border-color: $color-border;
   transition: 150ms $animationEasing;
 }
 
@@ -379,8 +391,48 @@ button {
   right: 0;
   left: 0;
   bottom: 0;
+  // background: #444;
+}
+
+.social {
+  margin-bottom: $lineHeight*2;
+  background: #222;
+  border-top: 2px solid $color-border;
+  border-bottom: 2px solid $color-border;
+}
+
+.social__icon {
+  display: block;
+  float: left;
   padding: $lineHeight;
-  background: #444;
+  transition: 150ms $animationEasing;
+
+  &:hover {
+    background: #111;
+  }
+
+}
+
+.contact  {
+  text-align: right;
+  margin-top: 15px;
+  margin-right: $lineHeight;
+
+  a {
+    text-decoration: none;
+  }
+
+}
+
+.contact__address {
+  padding: 0;
+}
+
+.footer-main__logo {
+  position: fixed;
+  z-index: -1;
+  bottom: 0;
+  opacity: 0.5;
 }
 
 
