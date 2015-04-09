@@ -10,7 +10,7 @@
 angular.module('normliV2App')
   .controller('InstagramfeedCtrl', function ($scope,instagram,$log) {
     var payload = {
-      count: 20
+      count: 21
     };
 
     $scope.pics =[];
