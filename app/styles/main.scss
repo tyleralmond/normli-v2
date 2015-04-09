@@ -70,6 +70,10 @@ button {
   color: #333;
 }
 
+main {
+  margin-top: 78px; /* height of fixed header */
+}
+
 
 
 
@@ -169,9 +173,9 @@ button {
     #HERO
 \*------------------------------------*/
 
-.hero-wrap {
-  margin-top: 78px;
-}
+// .hero-wrap {
+//   margin-top: 78px;
+// }
 
 .hero {
   background: #333;   
