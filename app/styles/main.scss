@@ -44,14 +44,14 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
+  background-color: #333;
 }
 
 body {
   position: relative;
   font-family: $fontHighlight;
   font-weight: 300;
-  color: white;
-  background-color: #333;
+  color: white;  
   box-sizing: border-box;
   min-height: 100%;
 }
@@ -72,6 +72,7 @@ button {
 
 main {
   margin-top: 78px; /* height of fixed header */
+  margin-bottom: 300px; /* height of fixed footer */
 }
 
 
@@ -222,7 +223,11 @@ main {
 
   &:focus, &:hover {
     background-color: #222;
-    outline: none;
+    outline: none;    
+  }
+
+  &:focus {
+    border-bottom: 1px solid $color-primary;
   }
 
 }
@@ -372,7 +377,7 @@ main {
 
 .instagram-loadmore {
   background: #333;
-  margin-bottom: 300px;
+  // margin-bottom: 300px;
 }
 
 .instagram-loadmore__btn {
