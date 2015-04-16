@@ -10,7 +10,7 @@
 angular.module('normliV2App')
   .controller('ContactController', function ($scope, $http) {
     $scope.result = 'hidden';
-    $scope.resultMessage;
+    $scope.resultMessage = '';
     $scope.formData; //formData is an object holding the name, email, subject, and message
     $scope.submitButtonDisabled = false;
     $scope.submitted = false; //used so that form errors are shown only after the form has been submitted
@@ -43,12 +43,13 @@ angular.module('normliV2App')
         e.preventDefault();
     };
 
-    // fix for JSON PHP problem/
+    // fix for JSON PHP problem
     var param = function(data) {
         var returnString = '';
         for (var d in data){
-            if (data.hasOwnProperty(d))
-            returnString += d + '=' + data[d] + '&';
+            if (data.hasOwnProperty(d)) {
+                returnString += d + '=' + data[d] + '&';
+            }
         }
         return returnString.slice( 0, returnString.length - 1 );
     };
