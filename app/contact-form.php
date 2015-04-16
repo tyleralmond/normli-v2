@@ -3,23 +3,35 @@ error_reporting(E_ALL);
 ini_set('display_errors', '1');
 require_once 'phpmailer/PHPMailerAutoload.php';
 
-if (isset($_POST['inputName']) && isset($_POST['inputEmail']) && isset($_POST['inputSubject']) && isset($_POST['inputMessage'])) {
+if (
+    isset($_POST['requestDate']) 
+    && isset($_POST['requestName']) 
+    && isset($_POST['requestEmail']) 
+    && isset($_POST['requestPhone']) 
+    && isset($_POST['projectType'])
+    ) {
 
     //check if any of the inputs are empty
-    if (empty($_POST['inputName']) || empty($_POST['inputEmail']) || empty($_POST['inputSubject']) || empty($_POST['inputMessage'])) {
-        $data = array('success' => false, 'message' => 'Please fill out the form completely.');
-        echo json_encode($data);
-        exit;
-    }
+    // if (empty($_POST['requestDate']) || empty($_POST['requestName']) || empty($_POST['requestEmail']) || empty($_POST['requestPhone'])) {
+    //     $data = array('success' => false, 'message' => 'Please fill out the form completely.');
+    //     echo json_encode($data);
+    //     exit;
+    // }
 
     //create an instance of PHPMailer
     $mail = new PHPMailer();
 
-    $mail->From = $_POST['inputEmail'];
-    $mail->FromName = $_POST['inputName'];
+    $mail->From = $_POST['requestEmail'];
+    $mail->FromName = $_POST['requestName'];
     $mail->AddAddress('tyler@tamedia.ca'); //recipient 
-    $mail->Subject = $_POST['inputSubject'];
-    $mail->Body = "Name: " . $_POST['inputName'] . "\r\n\r\nMessage: " . stripslashes($_POST['inputMessage']);
+    $mail->Subject = "Quote request from " . $_POST['requestName'];
+    $mail->Body = 
+        "Date: " . $_POST['requestDate'] .
+        "\r\nName: " . $_POST['requestName'] .
+        "\r\nEmail: " . $_POST['requestEmail'] .
+        "\r\nPhone: " . $_POST['requestPhone'] .
+        "\r\n\rType: " . $_POST['projectType'] 
+    ;
 
     if (isset($_POST['ref'])) {
         $mail->Body .= "\r\n\r\nRef: " . $_POST['ref'];

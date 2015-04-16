@@ -22,27 +22,45 @@
 	</form> -->
 
 	<div ng-controller="ContactController">
+
         <form ng-submit="submit(contactform, $event)" name="contactform" method="post" action="" role="form">
+            
             <div class="form-group">
-                <label for="inputName" class="">Name</label>
-                <input ng-model="formData.inputName" type="text" id="inputName" name="inputName" placeholder="Your Name" required>
-            </div>
-            <div class="form-group">
-                <label for="inputEmail" class="">Email</label>
-                <input ng-model="formData.inputEmail" type="email" id="inputEmail" name="inputEmail" placeholder="Your Email" required>
+                <label for="requestDate" class="">Date of Request</label>
+                <input ng-model="formData.requestDate" type="text" id="requestDate" name="requestDate" placeholder="YY/MM/DD" required>
             </div>
             <div class="form-group">
-                <label for="inputSubject" class="">Subject</label>
-                <input ng-model="formData.inputSubject" type="text" id="inputSubject" name="inputSubject" placeholder="Subject Message" required>
-            </div>
-            <div class="form-group" ng-class="{ 'has-error': contactform.inputMessage.$invalid && submitted }">
-                <label for="inputMessage" class="">Message</label>
-                <textarea ng-model="formData.inputMessage" rows="4" id="inputMessage" name="inputMessage" placeholder="Your message..." required></textarea>
+                <label for="requestName" class="">Name</label>
+                <input ng-model="formData.requestName" type="text" id="requestName" name="requestName" required>
             </div>
             <div class="form-group">
-                <button type="submit" class="btn btn-default" ng-disabled="submitButtonDisabled">Send Message</button>
+                <label for="requestEmail" class="">Email</label>
+                <input ng-model="formData.requestEmail" type="email" id="requestEmail" name="requestEmail" required>
             </div>
+            <div class="form-group">
+                <label for="requestPhone" class="">Phone</label>
+                <input ng-model="formData.requestPhone" type="tel" id="requestPhone" name="requestPhone" required>
+            </div>
+
+            <div class="form-group" ng-init="formData.projectType = 'Residential'">
+                <label class="">Type</label>
+                <select ng-model="formData.projectType">
+                    <option value="Residential">Residential</option>
+                    <option value="Institutional">Institutional</option>
+                    <option value="Commercial">Commercial</option>
+                    <option value="Retail">Retail</option>
+                    <option value="Infrastructure">Infrastructure</option>
+                </select>
+            </div>
+
+            <!-- submit button -->
+            <div class="form-group">
+                <button type="submit" class="button--primary instagram-loadmore__btn" ng-disabled="submitButtonDisabled">Send Message</button>
+            </div>
+
         </form>
+
+        <!-- success/error message -->
         <p ng-class="result">{{ resultMessage }}</p>
 
     </div>
