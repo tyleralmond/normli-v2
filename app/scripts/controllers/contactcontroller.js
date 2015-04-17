@@ -28,17 +28,17 @@ angular.module('normliV2App')
                 if (data.success) { //success comes from the return json object
                     $scope.submitButtonDisabled = true;
                     $scope.resultMessage = data.message;
-                    $scope.result='bg-success';
+                    $scope.result='success-msg';
                 } else {
                     $scope.submitButtonDisabled = false;
                     $scope.resultMessage = data.message;
-                    $scope.result='bg-danger';
+                    $scope.result='error-msg';
                 }
             });
         } else {
             $scope.submitButtonDisabled = false;
             $scope.resultMessage = 'Failed :( Please fill out all the fields.';
-            $scope.result='bg-danger';
+            $scope.result='error-msg';
         }
         e.preventDefault();
     };
