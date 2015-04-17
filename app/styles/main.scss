@@ -73,19 +73,7 @@ button {
 main {
   margin-top: 78px; /* height of fixed header */
   margin-bottom: 300px; /* height of fixed footer */
-}
-
-// TEMP - YOU BETTER DELETE THIS
-input,
-textarea {
-  background: #333;
-}
-
-
-//ANGUlar
-
-input.ng-invalid.ng-touched {
-  border: 2px solid #FA787E;
+  background-color: #333;
 }
 
 
@@ -461,9 +449,89 @@ input.ng-invalid.ng-touched {
 
 
 
+
+/*------------------------------------*\
+    #QUOTE
+\*------------------------------------*/
+
+.required-text {
+  margin-bottom: $lineHeight;
+  text-align: right;
+}
+
+// .form {
+//   margin-top: $lineHeight;
+// }
+
+.legend {
+  margin-bottom: $lineHeight;
+}
+
+.form-group {
+  margin-bottom: $lineHeight;
+}
+
+.label {
+  display: block;
+}
+
+.input-text {
+  width: 100%;
+  padding: 5px;
+  background: #333;
+  border: none;
+  border-bottom: 1px solid white;
+  border-radius: none;
+  font-size: $fontMedium;
+  transition: 150ms $animationEasing;
+
+  &:focus, &:hover {
+    background-color: #222;
+    outline: none;    
+  }
+
+  &:focus {
+    border-bottom: 1px solid $color-primary;
+  }
+
+}
+
+//success & error message
+
+.success-msg {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  background: rgba(0,0,0,0.85);
+  padding: $lineHeight*2;
+  color: green;
+  font-size: $fontLarge;
+}
+
+.error-msg {
+  color: $color-primary;
+  font-size: $fontLarge;
+}
+
+
+//Angular validation
+
+input.ng-invalid.ng-touched {
+  background-color: rgba(215, 40, 40, 0.25);
+}
+
+
+
+
+
 /*------------------------------------*\
     #UTILS
 \*------------------------------------*/
+
+.text-red {
+  color: $color-primary;
+}
 
 .promote-layer {
   /*

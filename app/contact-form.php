@@ -9,6 +9,7 @@ if (
     && isset($_POST['requestEmail']) 
     && isset($_POST['requestPhone']) 
     && isset($_POST['projectType'])
+    && isset($_POST['projectLocation'])
     ) {
 
     //check if any of the inputs are empty
@@ -30,7 +31,8 @@ if (
         "\r\nName: " . $_POST['requestName'] .
         "\r\nEmail: " . $_POST['requestEmail'] .
         "\r\nPhone: " . $_POST['requestPhone'] .
-        "\r\n\rType: " . $_POST['projectType'] 
+        "\r\n\rType: " . $_POST['projectType'] .
+        "\r\nLocation: " . $_POST['projectLocation'] 
     ;
 
     if (isset($_POST['ref'])) {
@@ -43,12 +45,12 @@ if (
         exit;
     }
 
-    $data = array('success' => true, 'message' => 'Thanks! We have received your message.');
+    $data = array('success' => true, 'message' => 'Thank you for your consideration. We will respond with a fee proposal for your review within 24 hours.');
     echo json_encode($data);
 
 } else {
 
-    $data = array('success' => false, 'message' => 'Please fill out the form completely.');
+    $data = array('success' => false, 'message' => 'Please fill out all of the required fields.');
     echo json_encode($data);
 
 }

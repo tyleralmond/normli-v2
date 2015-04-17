@@ -2,66 +2,59 @@
 
 	<h1>Request Quote</h1>
 
-<!-- 	<form action="">
+	<div ng-controller="ContactController">        
 
-		<label for="date-request">Date of Request</label>
-		<input type="date" id="date-request">
+        <form class="form" ng-submit="submit(contactform, $event)" name="contactform" method="post" action="" role="form">
 
-		<label for="name">Name</label>
-		<input type="text" id="name">
+            <p class="required-text">Required (<span class="text-red">*</span>)</p>
 
-		<label for="email">Email</label>
-		<input type="text" id="email">
+            <fieldset>            
+                <div class="form-group g-wide--1">
+                    <label class="label" for="requestDate">Date of Request <span class="text-red">*</span></label>
+                    <input class="input-text" ng-model="formData.requestDate" type="text" id="requestDate" name="requestDate" placeholder="YY/MM/DD" required>
+                </div>
+                <div class="form-group g-wide--3 g-wide--last">
+                    <label class="label" for="requestName">Name <span class="text-red">*</span></label>
+                    <input class="input-text" ng-model="formData.requestName" type="text" id="requestName" name="requestName" required>
+                </div>
+                <div class="form-group g-wide--2">
+                    <label class="label" for="requestEmail">Email <span class="text-red">*</span></label>
+                    <input class="input-text" ng-model="formData.requestEmail" type="email" id="requestEmail" name="requestEmail" required>
+                </div>
+                <div class="form-group g-wide--2 g-wide--last">
+                    <label class="label" for="requestPhone">Phone <span class="text-red">*</span></label>
+                    <input class="input-text" ng-model="formData.requestPhone" type="tel" id="requestPhone" name="requestPhone" required>
+                </div>
+            </fieldset>
 
-		<label for="phone">Phone</label>
-		<input type="text" id="phone">
+            <fieldset>
+                <legend class="legend large">Project Description</legend> 
+                <div class="form-group g-wide--1" ng-init="formData.projectType = 'Residential'">
+                    <label class="label">Type <span class="text-red">*</span></label>
+                    <select ng-model="formData.projectType" name="projectType" required>
+                        <option value="Residential">Residential</option>
+                        <option value="Institutional">Institutional</option>
+                        <option value="Commercial">Commercial</option>
+                        <option value="Retail">Retail</option>
+                        <option value="Infrastructure">Infrastructure</option>
+                    </select>
+                </div>
+                <div class="form-group g-wide--3 g-wide--last">
+                    <label class="label" for="projectLocation">Location <span class="text-red">*</span></label>
+                    <input class="input-text" ng-model="formData.projectLocation" type="text" id="projectLocation" name="projectLocation" placeholder="Address or Major Intersection, City
+" required>
+                </div>
+            </fieldset>
 
-		<label for="company">Company Name</label>
-		<input type="text" id="company">
-
-	</form> -->
-
-	<div ng-controller="ContactController">
-
-        <form ng-submit="submit(contactform, $event)" name="contactform" method="post" action="" role="form">
-            
-            <div class="form-group">
-                <label for="requestDate" class="">Date of Request</label>
-                <input ng-model="formData.requestDate" type="text" id="requestDate" name="requestDate" placeholder="YY/MM/DD" required>
-            </div>
-            <div class="form-group">
-                <label for="requestName" class="">Name</label>
-                <input ng-model="formData.requestName" type="text" id="requestName" name="requestName" required>
-            </div>
-            <div class="form-group">
-                <label for="requestEmail" class="">Email</label>
-                <input ng-model="formData.requestEmail" type="email" id="requestEmail" name="requestEmail" required>
-            </div>
-            <div class="form-group">
-                <label for="requestPhone" class="">Phone</label>
-                <input ng-model="formData.requestPhone" type="tel" id="requestPhone" name="requestPhone" required>
-            </div>
-
-            <div class="form-group" ng-init="formData.projectType = 'Residential'">
-                <label class="">Type</label>
-                <select ng-model="formData.projectType">
-                    <option value="Residential">Residential</option>
-                    <option value="Institutional">Institutional</option>
-                    <option value="Commercial">Commercial</option>
-                    <option value="Retail">Retail</option>
-                    <option value="Infrastructure">Infrastructure</option>
-                </select>
-            </div>
+            <!-- success/error message -->
+            <p ng-class="result">{{ resultMessage }}</p>
 
             <!-- submit button -->
             <div class="form-group">
                 <button type="submit" class="button--primary instagram-loadmore__btn" ng-disabled="submitButtonDisabled">Send Message</button>
             </div>
 
-        </form>
-
-        <!-- success/error message -->
-        <p ng-class="result">{{ resultMessage }}</p>
+        </form>        
 
     </div>
 
