@@ -37,7 +37,7 @@ angular.module('normliV2App')
             });
         } else {
             $scope.submitButtonDisabled = false;
-            $scope.resultMessage = 'Failed :( Please fill out all the fields.';
+            $scope.resultMessage = 'Please fill out all of the required fields.';
             $scope.result='error-msg';
         }
     };
