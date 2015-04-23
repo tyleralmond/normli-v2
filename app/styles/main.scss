@@ -216,6 +216,7 @@ main {
   max-width: 500px; 
   padding: 5px;
   background: #333;
+  background-image: none;
   border: none;
   border-bottom: 1px solid white;
   border-radius: none;
@@ -464,7 +465,7 @@ main {
 // }
 
 .legend {
-  padding-bottom: $lineHeight*2;
+  padding-bottom: $lineHeight;
 }
 
 .form-group {
@@ -480,6 +481,7 @@ main {
   padding: 5px;
   background: #333;
   border: none;
+  background-image: none;
   border-bottom: 1px solid white;
   border-radius: none;
   font-size: $fontMedium;
@@ -494,6 +496,11 @@ main {
     border-bottom: 1px solid $color-primary;
   }
 
+}
+
+// remove firefox default styling for required inputs
+[required] {
+  box-shadow: none;
 }
 
 //success & error message
@@ -528,6 +535,19 @@ input.ng-invalid.ng-touched {
 /*------------------------------------*\
     #UTILS
 \*------------------------------------*/
+
+.section-divider {
+  
+  &::before {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 50px;
+    margin-bottom: $lineHeight/2;
+    background: $color-primary;
+  }
+
+}
 
 .text-red {
   color: $color-primary;

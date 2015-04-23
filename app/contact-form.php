@@ -14,15 +14,24 @@ if (
     && isset($_POST['projectType'])
     && isset($_POST['projectLocation'])
     && isset($_POST['projectHighlight'])
-    && isset($_POST['projectPeople'])
-    && isset($_POST['projectImgSize'])
-
     && isset($_POST['projectExterior'])
     && isset($_POST['projectInterior'])
     && isset($_POST['projectPlan'])
     && isset($_POST['projectAerial'])
     && isset($_POST['projectAnimation'])
     && isset($_POST['projectImgNumber'])
+    && isset($_POST['projectPeople'])
+    && isset($_POST['projectImgSize'])
+
+    && isset($_POST['scheduleStart'])
+    && isset($_POST['scheduleDeadline'])
+    && isset($_POST['schedulePreview1'])
+    && isset($_POST['schedulePreview2'])
+    && isset($_POST['schedulePreview3'])
+    && isset($_POST['scheduleRevisions1'])
+    && isset($_POST['scheduleRevisions2'])
+    && isset($_POST['scheduleRevisions3'])
+    && isset($_POST['scheduleFinal'])
     ) {
 
     //check if any of the inputs are empty
@@ -37,15 +46,25 @@ if (
         empty($_POST['projectType']) ||
         empty($_POST['projectLocation']) ||
         empty($_POST['projectHighlight']) ||
-        empty($_POST['projectPeople']) ||
-        empty($_POST['projectImgSize']) ||
-
         empty($_POST['projectExterior']) ||
         empty($_POST['projectInterior']) ||
         empty($_POST['projectPlan']) ||
         empty($_POST['projectAerial']) ||
         empty($_POST['projectAnimation']) ||
-        empty($_POST['projectImgNumber'])
+        empty($_POST['projectImgNumber']) ||
+        empty($_POST['projectPeople']) ||
+        empty($_POST['projectImgSize']) ||
+
+        empty($_POST['scheduleStart']) ||
+        empty($_POST['scheduleDeadline']) ||
+        empty($_POST['schedulePreview1']) ||
+        empty($_POST['schedulePreview2']) ||
+        empty($_POST['schedulePreview3']) ||
+        empty($_POST['scheduleRevisions1']) ||
+        empty($_POST['scheduleRevisions2']) ||
+        empty($_POST['scheduleRevisions3']) ||
+        empty($_POST['scheduleFinal'])
+        
         ) {
         $data = array('success' => false, 'message' => 'Please fill out all of the required fields.');
         echo json_encode($data);
@@ -71,16 +90,27 @@ if (
         "\r\nType: " . $_POST['projectType'] .
         "\r\nLocation: " . $_POST['projectLocation'] .
         "\r\nProject Highlight: " . $_POST['projectHighlight'] .
-        "\r\nPeople: " . $_POST['projectPeople'] .
-        "\r\nImage Size Options: " . $_POST['projectImgSize'] .
-
-        "\r\n\rDELIVERABLES" .
+        "\r\nDELIVERABLES" .
         "\r\nExterior: " . $_POST['projectExterior'] .
         "\r\nInterior: " . $_POST['projectInterior'] .
         "\r\nPlan: " . $_POST['projectPlan'] .
         "\r\nAerial: " . $_POST['projectAerial'] .
         "\r\nAnimation: " . $_POST['projectAnimation'] .
         "\r\nTotal No. Images: " . $_POST['projectImgNumber']
+        "\r\nPeople: " . $_POST['projectPeople'] .
+        "\r\nImage Size Options: " . $_POST['projectImgSize'] .
+
+        "\r\n\rSCHEDULE OF DELIVERY DEADLINES" .
+        "\r\nStart Date: " . $_POST['scheduleStart'] .
+        "\r\nFinal Images Deadline: " . $_POST['scheduleDeadline'] .
+        "\r\nWORKBACK SCHEDULE" .
+        "\r\nPreview 1 Date: " . $_POST['schedulePreview1'] .
+        "\r\nPreview 2 Date: " . $_POST['schedulePreview2'] .
+        "\r\nPreview 3 Date: " . $_POST['schedulePreview3'] .
+        "\r\nFinal Image Revisions (Round 1, V1): " . $_POST['scheduleRevisions1'] .
+        "\r\nFinal Image Revisions (Round 2, V2): " . $_POST['scheduleRevisions2'] .
+        "\r\nFinal Image Revisions (Round 3, V3): " . $_POST['scheduleRevisions3'] .
+        "\r\nFinal Image: " . $_POST['scheduleFinal']
     ;
 
     if (isset($_POST['ref'])) {
