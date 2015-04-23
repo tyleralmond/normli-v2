@@ -86,18 +86,19 @@ main {
 [ng-view].ng-enter,
 [ng-view].ng-leave {
   position: absolute;
-  z-index: $z-header;
+  // z-index: $z-header;
   left: 0;
   right: 0;
   transition: 250ms;
 }
 
 [ng-view].ng-enter {
-  transform: translate3d(0, 50px, 0);
+  transform: translate3d(0, -50px, 0);
   opacity: 0;
 }
 
 [ng-view].ng-enter-active {
+  transition-delay: 250ms;
   transform: translate3d(0, 0, 0);
   opacity: 1;
 }
@@ -109,6 +110,7 @@ main {
 
 [ng-view].ng-leave-active {
   opacity: 0;
+  // transform: scale(0.75);
 }
 
 
@@ -496,6 +498,11 @@ main {
     border-bottom: 1px solid $color-primary;
   }
 
+}
+
+.helper-text {
+  font-size: $fontSmall;
+  color: #ccc;
 }
 
 // remove firefox default styling for required inputs
