@@ -217,9 +217,10 @@ main {
   width: 75%;
   max-width: 500px; 
   padding: 5px;
-  background: #333;
   background-image: none;
   border: none;
+  -webkit-appearance: none;
+  background: none;
   border-bottom: 1px solid white;
   border-radius: none;
   font-size: $fontMedium;
@@ -481,11 +482,13 @@ main {
 .input-text {
   width: 100%;
   padding: 5px;
-  background: #333;
-  border: none;
   background-image: none;
-  border-bottom: 1px solid white;
+  border: none;
   border-radius: none;
+  -webkit-appearance: none;
+  background: none;
+  background-image: none;
+  border-bottom: 1px solid white;  
   font-size: $fontMedium;
   transition: 150ms $animationEasing;
 
@@ -542,6 +545,10 @@ input.ng-invalid.ng-touched {
 /*------------------------------------*\
     #UTILS
 \*------------------------------------*/
+
+.bg-light {
+  background: #444;
+}
 
 .section-divider {
   
