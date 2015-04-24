@@ -114,7 +114,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         "\r\nFinal Image Revisions (Round 1, V1): " . $_POST['scheduleRevisions1'] .
         "\r\nFinal Image Revisions (Round 2, V2): " . $_POST['scheduleRevisions2'] .
         "\r\nFinal Image Revisions (Round 3, V3): " . $_POST['scheduleRevisions3'] .
-        "\r\nFinal Image: " . $_POST['scheduleFinal']
+        "\r\nFinal Image: " . $_POST['scheduleFinal'] .
+
+        "\r\n\rPURPOSE OF THE IMAGES" .
+        "\r\nCity Planning: " . $_POST['purposeCity'] .
+        "\r\nConceptual Design: " . $_POST['purposeConceptual'] .
+        "\r\nSchematic Design: " . $_POST['purposeSchematic'] .
+        "\r\nMarketing: " . $_POST['purposeMarketing'] .
+        "\r\nCompetition: " . $_POST['purposeCompetition'] .
+        "\r\nP3: " . $_POST['purposeP3'] .
+        "\r\nPromotional: " . $_POST['purposePromo'] .
+        "\r\nOther: " . $_POST['purposeOther']
     ;
 
     if (isset($_POST['ref'])) {
