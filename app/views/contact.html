@@ -41,6 +41,8 @@
                 </div><!-- end/row -->
             </fieldset>
 
+            
+            <!-- WHAT -->
             <fieldset>
                 <legend class="legend xlarge section-divider">
                     <h2>WHAT <span class="medium">| Project Description</span></h2>
@@ -68,41 +70,38 @@
                     </div>
                 </div><!-- end/row -->
 
-                <fieldset>
-                    <legend class="legend large">
-                        <h3>Deliverables <span class="base"><span>|</span> Description (View/Day/Dusk/Season/Orientation/TBC)</span></h3>
-                    </legend>
-                    <div class="clear">
-                        <div class="form-group g-wide--2">
-                            <label class="label" for="projectExterior">Exterior <span class="text-red">*</span></label>
-                            <input class="input-text" ng-model="formData.projectExterior" type="text" id="projectExterior" name="projectExterior" required>
-                        </div>
-                        <div class="form-group g-wide--2 g-wide--last">
-                            <label class="label" for="projectInterior">Interior <span class="text-red">*</span></label>
-                            <input class="input-text" ng-model="formData.projectInterior" type="text" id="projectInterior" name="projectInterior" required>
-                        </div>
-                    </div><!-- end/row -->
-                    <div class="clear">
-                        <div class="form-group g-wide--2">
-                            <label class="label" for="projectPlan">Plan <span class="text-red">*</span></label>
-                            <input class="input-text" ng-model="formData.projectPlan" type="text" id="projectPlan" name="projectPlan" required>
-                        </div>
-                        <div class="form-group g-wide--2 g-wide--last">
-                            <label class="label" for="projectAerial">Aerial <span class="text-red">*</span></label>
-                            <input class="input-text" ng-model="formData.projectAerial" type="text" id="projectAerial" name="projectAerial" required>
-                        </div>
-                    </div><!-- end/row -->
-                    <div class="clear">
-                        <div class="form-group g-wide--2">
-                            <label class="label" for="projectAnimation">Animation <span class="text-red">*</span></label>
-                            <input class="input-text" ng-model="formData.projectAnimation" type="text" id="projectAnimation" name="projectAnimation" placeholder="Duration (seconds/minutes)" required>
-                        </div>
-                        <div class="form-group g-wide--2 g-wide--last">
-                            <label class="label" for="projectImgNumber">Total No. Images <span class="text-red">*</span></label>
-                            <input class="input-text" ng-model="formData.projectImgNumber" type="text" id="projectImgNumber" name="projectImgNumber" required>
-                        </div>
-                    </div><!-- end/row -->
-                </fieldset>
+                <h3 class="legend large">Deliverables <span class="base"> - Description (View/Day/Dusk/Season/Orientation/TBC)</span></h3>
+                <div class="clear">
+                    <div class="form-group g-wide--2">
+                        <label class="label" for="projectExterior">Exterior <span class="text-red">*</span></label>
+                        <input class="input-text" ng-model="formData.projectExterior" type="text" id="projectExterior" name="projectExterior" required>
+                    </div>
+                    <div class="form-group g-wide--2 g-wide--last">
+                        <label class="label" for="projectInterior">Interior <span class="text-red">*</span></label>
+                        <input class="input-text" ng-model="formData.projectInterior" type="text" id="projectInterior" name="projectInterior" required>
+                    </div>
+                </div><!-- end/row -->
+                <div class="clear">
+                    <div class="form-group g-wide--2">
+                        <label class="label" for="projectPlan">Plan <span class="text-red">*</span></label>
+                        <input class="input-text" ng-model="formData.projectPlan" type="text" id="projectPlan" name="projectPlan" required>
+                    </div>
+                    <div class="form-group g-wide--2 g-wide--last">
+                        <label class="label" for="projectAerial">Aerial <span class="text-red">*</span></label>
+                        <input class="input-text" ng-model="formData.projectAerial" type="text" id="projectAerial" name="projectAerial" required>
+                    </div>
+                </div><!-- end/row -->
+                <div class="clear">
+                    <div class="form-group g-wide--2">
+                        <label class="label" for="projectAnimation">Animation <span class="text-red">*</span></label>
+                        <input class="input-text" ng-model="formData.projectAnimation" type="text" id="projectAnimation" name="projectAnimation" placeholder="Duration (seconds/minutes)" required>
+                    </div>
+                    <div class="form-group g-wide--2 g-wide--last">
+                        <label class="label" for="projectImgNumber">Total No. Images <span class="text-red">*</span></label>
+                        <input class="input-text" ng-model="formData.projectImgNumber" type="text" id="projectImgNumber" name="projectImgNumber" required>
+                    </div>
+                </div><!-- end/row -->
+
                 <div class="clear">
                     <div class="form-group g-wide--1" ng-init="formData.projectPeople = 'None'">
                         <label class="label">People <span class="text-red">*</span></label>
@@ -115,14 +114,16 @@
                     <div class="form-group g-wide--3 g-wide--last" ng-init="formData.projectImgSize = 'Standard 5,000 pixels'">
                         <label class="label">Image Size Options <span class="text-red">*</span></label>
                         <select ng-model="formData.projectImgSize" name="projectImgSize" required>
-                            <option value="Standard 5,000 pixels">Standard 5,000 pixels</option>
-                            <option value="Oversize 10,000 pixels">Oversize 10,000 pixels (extra processing fee $500/image)</option>
-                            <option value="Special Request">Special Request >$10,000 pixels (call Norm to discuss)</option>
+                            <option value="Standard 5,000 pixels">Standard 5,000 px</option>
+                            <option value="Oversize 10,000 pixels">Oversize 10,000 px (extra processing fee $500/image)</option>
+                            <option value="Special Request">Special Request > 10,000 px (call Norm)</option>
                         </select>
                     </div>
                 </div><!-- end/row -->
             </fieldset>
 
+            
+            <!-- WHEN -->
             <fieldset>
                 <legend class="legend xlarge section-divider">
                     <h2>WHEN <span class="medium">| Schedule of Delivery Deadlines</span></h2>
@@ -140,57 +141,56 @@
                         <input class="input-text" ng-model="formData.scheduleDeadline" type="text" id="scheduleDeadline" name="scheduleDeadline" placeholder="MM/DD/YY">
                     </div>
                 </div><!-- end/row -->
-                <fieldset>
-                    <legend class="legend large">
-                        <h3>Workback Schedule</h3>
-                    </legend>
-                    <div class="clear">
-                        <div class="form-group g-wide--2">
-                            <label class="label" for="schedulePreview1">Preview 1 Date</label>
-                            <input class="input-text" ng-model="formData.schedulePreview1" type="text" id="schedulePreview1" name="schedulePreview1" placeholder="MM/DD/YY">                   
-                            <span class="helper-text">Point of View & Geometry (Includes up to 3 rounds of markups)</span>
-                        </div>
-                        <div class="form-group g-wide--2 g-wide--last">
-                            <label class="label" for="schedulePreview2">Preview 2 Date</label>
-                            <input class="input-text" ng-model="formData.schedulePreview2" type="text" id="schedulePreview2" name="schedulePreview2" placeholder="MM/DD/YY">                   
-                            <span class="helper-text">Textures, Lighting & Materials (Includes up to 3 rounds of markups)</span>
-                        </div>
-                    </div><!-- end/row -->
-                    <div class="clear">
-                        <div class="form-group g-wide--2">
-                            <label class="label" for="schedulePreview3">Preview 3 Date</label>
-                            <input class="input-text" ng-model="formData.schedulePreview3" type="text" id="schedulePreview3" name="schedulePreview3" placeholder="MM/DD/YY">                   
-                            <span class="helper-text">People and Finishing Details (Includes up to 3 rounds of markups)</span>
-                        </div>
-                        <div class="form-group g-wide--2 g-wide--last">
-                            <label class="label" for="scheduleRevisions1">Final Image Revisions</label>
-                            <input class="input-text" ng-model="formData.scheduleRevisions1" type="text" id="scheduleRevisions1" name="scheduleRevisions1" placeholder="MM/DD/YY">                   
-                            <span class="helper-text">Round 1, V1</span>
-                        </div>
-                    </div><!-- end/row -->
-                    <div class="clear">
-                        <div class="form-group g-wide--2">
-                            <label class="label" for="scheduleRevisions2">Final Image Revisions</label>
-                            <input class="input-text" ng-model="formData.scheduleRevisions2" type="text" id="scheduleRevisions2" name="scheduleRevisions2" placeholder="MM/DD/YY">                   
-                            <span class="helper-text">Round 2, V2</span>
-                        </div>
-                        <div class="form-group g-wide--2 g-wide--last">
-                            <label class="label" for="scheduleRevisions3">Final Image Revisions</label>
-                            <input class="input-text" ng-model="formData.scheduleRevisions3" type="text" id="scheduleRevisions3" name="scheduleRevisions3" placeholder="MM/DD/YY">                   
-                            <span class="helper-text">Round 3, V3</span>
-                        </div>
-                    </div><!-- end/row -->
-                    <div class="clear">
-                        <div class="form-group g-wide--2 g-wide--last">
-                            <label class="label" for="scheduleFinal">Final Image</label>
-                            <input class="input-text" ng-model="formData.scheduleFinal" type="text" id="scheduleFinal" name="scheduleFinal" placeholder="MM/DD/YY">
-                            <span class="helper-text">Complete</span>
-                        </div>
-                    </div><!-- end/row -->
-                    <span>NOTE: Fee includes three (3) rounds of markups for each Preview and three (3) rounds of markups for the Final Image.  All additional revisions will be billed at $80/hr.</span>
-                </fieldset>                
+
+                <h3 class="legend large">Workback Schedule</h3>
+                <div class="clear">
+                    <div class="form-group g-wide--2">
+                        <label class="label" for="schedulePreview1">Preview 1 Date</label>
+                        <input class="input-text" ng-model="formData.schedulePreview1" type="text" id="schedulePreview1" name="schedulePreview1" placeholder="MM/DD/YY">                   
+                        <span class="helper-text">Point of View & Geometry (Includes up to 3 rounds of markups)</span>
+                    </div>
+                    <div class="form-group g-wide--2 g-wide--last">
+                        <label class="label" for="schedulePreview2">Preview 2 Date</label>
+                        <input class="input-text" ng-model="formData.schedulePreview2" type="text" id="schedulePreview2" name="schedulePreview2" placeholder="MM/DD/YY">                   
+                        <span class="helper-text">Textures, Lighting & Materials (Includes up to 3 rounds of markups)</span>
+                    </div>
+                </div><!-- end/row -->
+                <div class="clear">
+                    <div class="form-group g-wide--2">
+                        <label class="label" for="schedulePreview3">Preview 3 Date</label>
+                        <input class="input-text" ng-model="formData.schedulePreview3" type="text" id="schedulePreview3" name="schedulePreview3" placeholder="MM/DD/YY">                   
+                        <span class="helper-text">People and Finishing Details (Includes up to 3 rounds of markups)</span>
+                    </div>
+                    <div class="form-group g-wide--2 g-wide--last">
+                        <label class="label" for="scheduleRevisions1">Final Image Revisions</label>
+                        <input class="input-text" ng-model="formData.scheduleRevisions1" type="text" id="scheduleRevisions1" name="scheduleRevisions1" placeholder="MM/DD/YY">                   
+                        <span class="helper-text">Round 1, V1</span>
+                    </div>
+                </div><!-- end/row -->
+                <div class="clear">
+                    <div class="form-group g-wide--2">
+                        <label class="label" for="scheduleRevisions2">Final Image Revisions</label>
+                        <input class="input-text" ng-model="formData.scheduleRevisions2" type="text" id="scheduleRevisions2" name="scheduleRevisions2" placeholder="MM/DD/YY">                   
+                        <span class="helper-text">Round 2, V2</span>
+                    </div>
+                    <div class="form-group g-wide--2 g-wide--last">
+                        <label class="label" for="scheduleRevisions3">Final Image Revisions</label>
+                        <input class="input-text" ng-model="formData.scheduleRevisions3" type="text" id="scheduleRevisions3" name="scheduleRevisions3" placeholder="MM/DD/YY">                   
+                        <span class="helper-text">Round 3, V3</span>
+                    </div>
+                </div><!-- end/row -->
+                <div class="clear">
+                    <div class="form-group g-wide--2 g-wide--last">
+                        <label class="label" for="scheduleFinal">Final Image</label>
+                        <input class="input-text" ng-model="formData.scheduleFinal" type="text" id="scheduleFinal" name="scheduleFinal" placeholder="MM/DD/YY">
+                        <span class="helper-text">Complete</span>
+                    </div>
+                </div><!-- end/row -->
+                <span>NOTE: Fee includes three (3) rounds of markups for each Preview and three (3) rounds of markups for the Final Image.  All additional revisions will be billed at $80/hr.</span>
             </fieldset>
 
+            
+            <!-- WHY -->
             <fieldset>
                 <legend class="legend xlarge section-divider">
                     <h2>WHY <span class="medium">| Purpose of the Images</span></h2>
@@ -234,6 +234,82 @@
                         <input class="input-text" ng-model="formData.purposeOther" type="text" id="purposeOther" name="purposeOther">
                     </div>
                 </div><!-- end/row -->
+            </fieldset>
+
+            
+            <!-- WHO -->
+            <fieldset>
+                <legend class="legend xlarge section-divider">
+                    <h2>WHO <span class="medium">| The Target Audience and who is involved</span></h2>
+                </legend>
+                <div class="clear">
+                    <div class="form-group g-wide--4 g-wide--last">
+                        <label class="label" for="whoTarget">Describe the Target Audience</label>
+                        <textarea class="input-text" ng-model="formData.whoTarget" id="whoTarget" name="whoTarget" rows="4" cols="50"></textarea>
+                    </div>
+                </div><!-- end/row -->
+
+                <h3 class="legend large">Design Team <span class="base">– Who is involved in the project, ie. part of the design, review and approval process</span></h3>
+                <div class="clear">
+                    <div class="form-group g-wide--2">
+                        <label class="label" for="whoMainName">Main Contact Name</label>
+                        <input class="input-text" ng-model="formData.whoMainName" type="text" id="whoMainName" name="whoMainName">
+                    </div>
+                    <div class="form-group g-wide--2 g-wide--last">
+                        <label class="label" for="whoMainEmail">Main Contact Email</label>
+                        <input class="input-text" ng-model="formData.whoMainEmail" type="text" id="whoMainEmail" name="whoMainEmail">
+                    </div>
+                </div><!-- end/row -->
+                <div class="clear">
+                    <div class="form-group g-wide--2">
+                        <label class="label" for="whoArchitectName">Architect Contact Name</label>
+                        <input class="input-text" ng-model="formData.whoArchitectName" type="text" id="whoArchitectName" name="whoArchitectName">
+                    </div>
+                    <div class="form-group g-wide--2 g-wide--last">
+                        <label class="label" for="whoArchitectEmail">Architect Contact Email</label>
+                        <input class="input-text" ng-model="formData.whoArchitectEmail" type="text" id="whoArchitectEmail" name="whoArchitectEmail">
+                    </div>
+                </div><!-- end/row -->
+                <div class="clear">
+                    <div class="form-group g-wide--2">
+                        <label class="label" for="whoLandscapeName">Landscape Contact Name</label>
+                        <input class="input-text" ng-model="formData.whoLandscapeName" type="text" id="whoLandscapeName" name="whoLandscapeName">
+                    </div>
+                    <div class="form-group g-wide--2 g-wide--last">
+                        <label class="label" for="whoLandscapeEmail">Landscape Contact Email</label>
+                        <input class="input-text" ng-model="formData.whoLandscapeEmail" type="text" id="whoLandscapeEmail" name="whoLandscapeEmail">
+                    </div>
+                </div><!-- end/row -->
+                <div class="clear">
+                    <div class="form-group g-wide--2">
+                        <label class="label" for="whoInteriorName">Interior Contact Name</label>
+                        <input class="input-text" ng-model="formData.whoInteriorName" type="text" id="whoInteriorName" name="whoInteriorName">
+                    </div>
+                    <div class="form-group g-wide--2 g-wide--last">
+                        <label class="label" for="whoInteriorEmail">Interior Contact Email</label>
+                        <input class="input-text" ng-model="formData.whoInteriorEmail" type="text" id="whoInteriorEmail" name="whoInteriorEmail">
+                    </div>
+                </div><!-- end/row --> 
+                <div class="clear">
+                    <div class="form-group g-wide--2">
+                        <label class="label" for="whoBuilderName">Builder Contact Name</label>
+                        <input class="input-text" ng-model="formData.whoBuilderName" type="text" id="whoBuilderName" name="whoBuilderName">
+                    </div>
+                    <div class="form-group g-wide--2 g-wide--last">
+                        <label class="label" for="whoBuilderEmail">Builder Contact Email</label>
+                        <input class="input-text" ng-model="formData.whoBuilderEmail" type="text" id="whoBuilderEmail" name="whoBuilderEmail">
+                    </div>
+                </div><!-- end/row -->
+                <div class="clear">
+                    <div class="form-group g-wide--2">
+                        <label class="label" for="whoMarketingName">Marketing Agency Contact Name</label>
+                        <input class="input-text" ng-model="formData.whoMarketingName" type="text" id="whoMarketingName" name="whoMarketingName">
+                    </div>
+                    <div class="form-group g-wide--2 g-wide--last">
+                        <label class="label" for="whoMarketingEmail">Marketing Agency Contact Email</label>
+                        <input class="input-text" ng-model="formData.whoMarketingEmail" type="text" id="whoMarketingEmail" name="whoMarketingEmail">
+                    </div>
+                </div><!-- end/row -->               
             </fieldset>
 
 
