@@ -351,7 +351,9 @@ module.exports = function (grunt) {
             'views/{,*/}*.html',
             'images/{,*/}*.{webp}',
             'fonts/*',
-			'images/icons/**'
+			      'images/icons/**',
+            'contact-form.php',
+            'phpmailer/*'
           ]
         }, {
           expand: true,
