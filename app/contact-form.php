@@ -103,7 +103,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         "\nAerial: " . $_POST['projectAerial'] .
         "\nAnimation: " . $_POST['projectAnimation'] .
         "\nTotal No. Images: " . $_POST['projectImgNumber'] .
-        "\nPeople: " . $_POST['projectPeople'] .
+        "\n\nPeople: " . $_POST['projectPeople'] .
         "\nImage Size Options: " . $_POST['projectImgSize'] .
 
 
@@ -155,7 +155,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         "\nName: " . $_POST['whoBuilderName'] .
         "\nEmail: " . $_POST['whoBuilderEmail'] .
         
-        "\n\nMARKETING" .
+        "\n\nMARKETING AGENCY" .
         "\nName: " . $_POST['whoMarketingName'] .
         "\nEmail: " . $_POST['whoMarketingEmail']
     ;
