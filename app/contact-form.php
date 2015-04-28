@@ -84,79 +84,80 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $mail->Subject = "Quote request from " . $_POST['requestName'];
     $mail->Body = 
         "Date: " . $_POST['requestDate'] .
-        "\r\nName: " . $_POST['requestName'] .
-        "\r\nEmail: " . $_POST['requestEmail'] .
-        "\r\nPhone: " . $_POST['requestPhone'] .
-        "\r\nCompany Name: " . $_POST['companyName'] .
-        "\r\nProject Name: " . $_POST['projectName'] .
+        "\nName: " . $_POST['requestName'] .
+        "\nEmail: " . $_POST['requestEmail'] .
+        "\nPhone: " . $_POST['requestPhone'] .
+        "\nCompany Name: " . $_POST['companyName'] .
+        "\nProject Name: " . $_POST['projectName'] .
 
 
-        "\r\n\rWHAT - PROJECT DESCRIPTION" .
-        "\r\n\rType: " . $_POST['projectType'] .
-        "\r\nLocation: " . $_POST['projectLocation'] .
-        "\r\nProject Highlight: " . $_POST['projectHighlight'] .
+        "\n\n\nWHAT - PROJECT DESCRIPTION" .
+        "\n\nType: " . $_POST['projectType'] .
+        "\nLocation: " . $_POST['projectLocation'] .
+        "\nProject Highlight: " . $_POST['projectHighlight'] .
 
-        "\r\n\rDELIVERABLES" .
-        "\r\nExterior: " . $_POST['projectExterior'] .
-        "\r\nInterior: " . $_POST['projectInterior'] .
-        "\r\nPlan: " . $_POST['projectPlan'] .
-        "\r\nAerial: " . $_POST['projectAerial'] .
-        "\r\nAnimation: " . $_POST['projectAnimation'] .
-        "\r\nTotal No. Images: " . $_POST['projectImgNumber'] .
-        "\r\nPeople: " . $_POST['projectPeople'] .
-        "\r\nImage Size Options: " . $_POST['projectImgSize'] .
-
-
-        "\r\n\rWHEN - SCHEDULE OF DELIVERY DEADLINES" .
-        "\r\n\rStart Date: " . $_POST['scheduleStart'] .
-        "\r\nFinal Images Deadline: " . $_POST['scheduleDeadline'] .
-
-        "\r\n\rWORKBACK SCHEDULE" .
-        "\r\nPreview 1 Date: " . $_POST['schedulePreview1'] .
-        "\r\nPreview 2 Date: " . $_POST['schedulePreview2'] .
-        "\r\nPreview 3 Date: " . $_POST['schedulePreview3'] .
-        "\r\nFinal Image Revisions (Round 1, V1): " . $_POST['scheduleRevisions1'] .
-        "\r\nFinal Image Revisions (Round 2, V2): " . $_POST['scheduleRevisions2'] .
-        "\r\nFinal Image Revisions (Round 3, V3): " . $_POST['scheduleRevisions3'] .
-        "\r\nFinal Image: " . $_POST['scheduleFinal'] .
+        "\n\nDELIVERABLES" .
+        "\n\nExterior: " . $_POST['projectExterior'] .
+        "\nInterior: " . $_POST['projectInterior'] .
+        "\nPlan: " . $_POST['projectPlan'] .
+        "\nAerial: " . $_POST['projectAerial'] .
+        "\nAnimation: " . $_POST['projectAnimation'] .
+        "\nTotal No. Images: " . $_POST['projectImgNumber'] .
+        "\nPeople: " . $_POST['projectPeople'] .
+        "\nImage Size Options: " . $_POST['projectImgSize'] .
 
 
-        "\r\n\rWHY - PURPOSE OF THE IMAGES" .
-        "\r\n\rCity Planning: " . $_POST['purposeCity'] .
-        "\r\nConceptual Design: " . $_POST['purposeConceptual'] .
-        "\r\nSchematic Design: " . $_POST['purposeSchematic'] .
-        "\r\nMarketing: " . $_POST['purposeMarketing'] .
-        "\r\nCompetition: " . $_POST['purposeCompetition'] .
-        "\r\nP3: " . $_POST['purposeP3'] .
-        "\r\nPromotional: " . $_POST['purposePromo'] .
-        "\r\nOther: " . $_POST['purposeOther'] .
+        "\n\n\nWHEN - SCHEDULE OF DELIVERY DEADLINES" .
+        "\n\nStart Date: " . $_POST['scheduleStart'] .
+        "\nFinal Images Deadline: " . $_POST['scheduleDeadline'] .
+
+        "\n\nWORKBACK SCHEDULE" .
+        "\n\nPreview 1 Date: " . $_POST['schedulePreview1'] .
+        "\nPreview 2 Date: " . $_POST['schedulePreview2'] .
+        "\nPreview 3 Date: " . $_POST['schedulePreview3'] .
+        "\nFinal Image Revisions (Round 1, V1): " . $_POST['scheduleRevisions1'] .
+        "\nFinal Image Revisions (Round 2, V2): " . $_POST['scheduleRevisions2'] .
+        "\nFinal Image Revisions (Round 3, V3): " . $_POST['scheduleRevisions3'] .
+        "\nFinal Image: " . $_POST['scheduleFinal'] .
 
 
-        "\r\n\rWHO - THE TARGET AUDIENCE AND WHO IS INVOLVED" .
+        "\n\n\nWHY - PURPOSE OF THE IMAGES" .
+        "\n\nCity Planning: " . $_POST['purposeCity'] .
+        "\nConceptual Design: " . $_POST['purposeConceptual'] .
+        "\nSchematic Design: " . $_POST['purposeSchematic'] .
+        "\nMarketing: " . $_POST['purposeMarketing'] .
+        "\nCompetition: " . $_POST['purposeCompetition'] .
+        "\nP3: " . $_POST['purposeP3'] .
+        "\nPromotional: " . $_POST['purposePromo'] .
+        "\nOther: " . $_POST['purposeOther'] .
 
-        "\r\n\rMAIN CONTACT" .
-        "\r\nName: " . $_POST['whoMainName'] .
-        "\r\nEmail: " . $_POST['whoMainEmail'] .
+
+        "\n\n\nWHO - THE TARGET AUDIENCE AND WHO IS INVOLVED" .
+        "\n\nDescribe the Target Audience: " . $_POST['whoTarget'] .
+
+        "\n\nMAIN CONTACT" .
+        "\nName: " . $_POST['whoMainName'] .
+        "\nEmail: " . $_POST['whoMainEmail'] .
         
-        "\r\n\rARCHITECT" .
-        "\r\nName: " . $_POST['whoArchitectName'] .
-        "\r\nEmail: " . $_POST['whoArchitectEmail'] .
+        "\n\nARCHITECT" .
+        "\nName: " . $_POST['whoArchitectName'] .
+        "\nEmail: " . $_POST['whoArchitectEmail'] .
         
-        "\r\n\rLANDSCAPE" .
-        "\r\nName: " . $_POST['whoLandscapeName'] .
-        "\r\nEmail: " . $_POST['whoLandscapeEmail'] .
+        "\n\nLANDSCAPE" .
+        "\nName: " . $_POST['whoLandscapeName'] .
+        "\nEmail: " . $_POST['whoLandscapeEmail'] .
         
-        "\r\n\rINTERIOR" .
-        "\r\nName: " . $_POST['whoInteriorName'] .
-        "\r\nEmail: " . $_POST['whoInteriorEmail'] .
+        "\n\nINTERIOR" .
+        "\nName: " . $_POST['whoInteriorName'] .
+        "\nEmail: " . $_POST['whoInteriorEmail'] .
         
-        "\r\n\rBUILDER" .
-        "\r\nName: " . $_POST['whoBuilderName'] .
-        "\r\nEmail: " . $_POST['whoBuilderEmail'] .
+        "\n\nBUILDER" .
+        "\nName: " . $_POST['whoBuilderName'] .
+        "\nEmail: " . $_POST['whoBuilderEmail'] .
         
-        "\r\n\rMARKETING" .
-        "\r\nName: " . $_POST['whoMarketingName'] .
-        "\r\nEmail: " . $_POST['whoMarketingEmail']
+        "\n\nMARKETING" .
+        "\nName: " . $_POST['whoMarketingName'] .
+        "\nEmail: " . $_POST['whoMarketingEmail']
     ;
 
     if (isset($_POST['ref'])) {
