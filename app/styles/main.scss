@@ -222,7 +222,7 @@ main {
   -webkit-appearance: none;
   background: none;
   border-bottom: 1px solid white;
-  border-radius: none;
+  border-radius: 0;
   font-size: $fontMedium;
   transition: 150ms $animationEasing;
 
@@ -482,9 +482,8 @@ main {
 .input-text {
   width: 100%;
   padding: 5px;
-  background-image: none;
   border: none;
-  border-radius: none;
+  border-radius: 0;
   -webkit-appearance: none;
   background: none;
   background-image: none;
@@ -501,6 +500,10 @@ main {
     border-bottom: 1px solid $color-primary;
   }
 
+}
+
+.select {
+  width: 100%;
 }
 
 .helper-text {
