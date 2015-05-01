@@ -3,37 +3,6 @@ error_reporting(E_ALL);
 ini_set('display_errors', '1');
 require_once 'phpmailer/PHPMailerAutoload.php';
 
-// if (
-//     isset($_POST['requestDate']) 
-//     && isset($_POST['requestName']) 
-//     && isset($_POST['requestEmail']) 
-//     && isset($_POST['requestPhone'])
-//     && isset($_POST['companyName'])
-//     && isset($_POST['projectName'])
-
-//     && isset($_POST['projectType'])
-//     && isset($_POST['projectLocation'])
-//     && isset($_POST['projectHighlight'])
-//     && isset($_POST['projectExterior'])
-//     && isset($_POST['projectInterior'])
-//     && isset($_POST['projectPlan'])
-//     && isset($_POST['projectAerial'])
-//     && isset($_POST['projectAnimation'])
-//     && isset($_POST['projectImgNumber'])
-//     && isset($_POST['projectPeople'])
-//     && isset($_POST['projectImgSize'])
-
-//     && isset($_POST['scheduleStart'])
-//     && isset($_POST['scheduleDeadline'])
-//     && isset($_POST['schedulePreview1'])
-//     && isset($_POST['schedulePreview2'])
-//     && isset($_POST['schedulePreview3'])
-//     && isset($_POST['scheduleRevisions1'])
-//     && isset($_POST['scheduleRevisions2'])
-//     && isset($_POST['scheduleRevisions3'])
-//     && isset($_POST['scheduleFinal'])
-//     )
-
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     //check if any of the inputs are empty
@@ -58,17 +27,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         empty($_POST['projectImgSize']) ||
 
         empty($_POST['scheduleStart'])
-
-        //not required
-        // empty($_POST['scheduleDeadline']) ||
-        // empty($_POST['schedulePreview1']) ||
-        // empty($_POST['schedulePreview2']) ||
-        // empty($_POST['schedulePreview3']) ||
-        // empty($_POST['scheduleRevisions1']) ||
-        // empty($_POST['scheduleRevisions2']) ||
-        // empty($_POST['scheduleRevisions3']) ||
-        // empty($_POST['scheduleFinal'])
-        
         ) {
         $data = array('success' => false, 'message' => 'Please fill out all of the required fields.');
         echo json_encode($data);
