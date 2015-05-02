@@ -90,33 +90,29 @@
                         <label class="label" for="projectDelDescription1">Description</label>
                         <input class="input-text" ng-model="formData.projectDelDescription1" type="text" id="projectDelDescription1" name="projectDelDescription1">
                     </div>
-                    <!-- <div class="form-group g-wide--2">
-                        <label class="label" for="projectExterior">Exterior</label>
-                        <input class="input-text" ng-model="formData.projectExterior" type="text" id="projectExterior" name="projectExterior">
-                    </div>
-                    <div class="form-group g-wide--2 g-wide--last">
-                        <label class="label" for="projectInterior">Interior</label>
-                        <input class="input-text" ng-model="formData.projectInterior" type="text" id="projectInterior" name="projectInterior">
-                    </div> -->
                 </div><!-- end/row -->
                 <div class="clear">
-                    <!-- <div class="form-group g-wide--2">
-                        <label class="label" for="projectPlan">Plan</label>
-                        <input class="input-text" ng-model="formData.projectPlan" type="text" id="projectPlan" name="projectPlan">
-                    </div>
-                    <div class="form-group g-wide--2 g-wide--last">
-                        <label class="label" for="projectAerial">Aerial</label>
-                        <input class="input-text" ng-model="formData.projectAerial" type="text" id="projectAerial" name="projectAerial">
-                    </div> -->
-                </div><!-- end/row -->
-                <div class="clear">
-                    <div class="form-group g-wide--2">
+                    <div class="form-group g-wide--4 g-wide--last">
                         <label class="label" for="projectAnimation">Animation</label>
                         <input class="input-text" ng-model="formData.projectAnimation" type="text" id="projectAnimation" name="projectAnimation" placeholder="Duration (seconds/minutes)">
                     </div>
-                    <div class="form-group g-wide--2 g-wide--last">
+                </div>
+                <div class="clear">
+                    <div class="form-group g-wide--2 g-wide--last" ng-init="formData.projectImgNumber = '1'">
                         <label class="label" for="projectImgNumber">Total No. Images <span class="text-red">*</span></label>
-                        <input class="input-text" ng-model="formData.projectImgNumber" type="text" id="projectImgNumber" name="projectImgNumber" required>
+                        <select class="select" ng-model="formData.projectImgNumber" name="projectImgNumber" required>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                        <span class="helper-text">To request packages of over 10 images, please email us directly at <a href="mailto:info@normli.ca">info@normli.ca</a></span>
                     </div>
                 </div><!-- end/row -->
 
