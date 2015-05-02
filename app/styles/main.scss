@@ -21,6 +21,11 @@ $color-primary: #de1e26;
 $color-secondary: #fff0d4;
 $color-main-bg: #333;
 $color-border: #999999;
+
+$header-height: 78px;
+$header-height-small: 52px;
+$footer-height: 300px;
+
 $z-header: 2;
 
 
@@ -68,8 +73,8 @@ a {
 }
 
 main {
-  margin-top: 78px; /* height of fixed header */
-  margin-bottom: 300px; /* height of fixed footer */
+  margin-top: $header-height; /* height of fixed header */
+  margin-bottom: $footer-height; /* height of fixed footer */
   background-color: $color-main-bg;
 }
 
@@ -115,7 +120,7 @@ main {
 
 .dropcap:first-of-type:first-letter {
   float: left;
-  margin: 5px 5px 5px 0;
+  margin: 12px 5px 5px 0;
   // padding: 10px 14px;
   // border: solid 2px #222;
   font-size: $fontXXLarge;
@@ -173,7 +178,7 @@ main {
 
 [ng-view].ng-leave-active {
   opacity: 0;
-  // transform: scale(0.75);
+  transform: scale(0.98);
 }
 
 
