@@ -107,7 +107,7 @@ main {
 }
 
 .secondary-hero--quote {
-  background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('../images/home-277dav.jpg');
+  background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('../images/minto-beechwood.jpg');
 }
 
 
@@ -612,6 +612,10 @@ input.ng-invalid.ng-touched {
 
 .text-red {
   color: $color-primary;
+}
+
+.font-italic {
+  font-style: italic;
 }
 
 .promote-layer {
