@@ -19,6 +19,7 @@
 
 $color-primary: #de1e26;
 $color-secondary: #fff0d4;
+$color-main-bg: #333;
 $color-border: #999999;
 $z-header: 2;
 
@@ -44,7 +45,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: #333;
+  background-color: $color-main-bg;
 }
 
 body {
@@ -66,15 +67,77 @@ a {
 
 }
 
-button {
-  color: #333;
-}
-
 main {
   margin-top: 78px; /* height of fixed header */
   margin-bottom: 300px; /* height of fixed footer */
-  background-color: #333;
+  background-color: $color-main-bg;
 }
+
+
+
+
+
+/*------------------------------------*\
+    #GLOBAL
+\*------------------------------------*/
+
+// buttons - override WSK
+
+.button--primary {
+  margin: $lineHeight*2 0;  
+  background: #222;
+  border-color: $color-border;
+  transition: 150ms $animationEasing;
+}
+
+
+// secondary hero image
+
+.secondary-hero {
+  height: $lineHeight*6;
+  width: 100%;
+  margin-top: $lineHeight;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100%;
+}
+
+.secondary-hero--about {
+  background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('../images/hero-3.jpg');
+}
+
+.secondary-hero--quote {
+  background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('../images/home-277dav.jpg');
+}
+
+
+//dropcap
+
+.dropcap:first-of-type:first-letter {
+  float: left;
+  margin: 5px 5px 5px 0;
+  // padding: 10px 14px;
+  // border: solid 2px #222;
+  font-size: $fontXXLarge;
+  color: $color-primary;
+}
+
+
+//section divider
+
+.section-divider {
+  margin-top: $lineHeight;
+  
+  &::before {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 50px;    
+    background: $color-primary;
+  }
+
+}
+
 
 
 
@@ -182,7 +245,7 @@ main {
 // }
 
 .hero {
-  background: #333;   
+  background: $color-main-bg;   
 
   @include media-query(medium) {
     width: 50%;
@@ -381,15 +444,8 @@ main {
 // load more button
 
 .instagram-loadmore {
-  background: #333;
+  background: $color-main-bg;
   // margin-bottom: 300px;
-}
-
-.instagram-loadmore__btn {
-  margin: $lineHeight*2 0;  
-  background: #222;
-  border-color: $color-border;
-  transition: 150ms $animationEasing;
 }
 
 
@@ -549,21 +605,9 @@ input.ng-invalid.ng-touched {
     #UTILS
 \*------------------------------------*/
 
+
 .bg-light {
   background: #444;
-}
-
-.section-divider {
-  
-  &::before {
-    content: '';
-    display: block;
-    height: 3px;
-    width: 50px;
-    // margin-bottom: $lineHeight/2;
-    background: $color-primary;
-  }
-
 }
 
 .text-red {
