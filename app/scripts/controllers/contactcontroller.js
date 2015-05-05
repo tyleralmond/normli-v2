@@ -25,7 +25,7 @@ angular.module('normliV2App')
     }];
     $scope.addDeliverable = function() {
     var newItemNo = $scope.formData.deliverables.length+1;
-    $scope.formData.deliverables.push({});
+    $scope.formData.deliverables.push({'id':'deliverable'+newItemNo});
     };
     $scope.removeDeliverable = function() {
     var lastItem = $scope.formData.deliverables.length-1;
