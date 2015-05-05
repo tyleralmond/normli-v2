@@ -11,7 +11,27 @@ angular.module('normliV2App')
   .controller('ContactController', function ($scope, $http) {
     $scope.result = 'hidden';
     $scope.resultMessage = '';
-    $scope.formData; //formData is an object holding the name, email, subject, and message
+    $scope.formData = {}; //formData is an object holding the name, email, subject, and message
+    
+    $scope.formData.deliverables = [{ 
+        id: 'deliverable1',
+        type: 'Exterior',
+        description: ''
+    },
+    {
+        id: 'deliverable2',
+        type: 'Interior',
+        description: ''
+    }];
+    $scope.addDeliverable = function() {
+    var newItemNo = $scope.formData.deliverables.length+1;
+    $scope.formData.deliverables.push({});
+    };
+    $scope.removeDeliverable = function() {
+    var lastItem = $scope.formData.deliverables.length-1;
+    $scope.formData.deliverables.splice(lastItem);
+    };
+
     $scope.submitButtonDisabled = false;
     $scope.submitted = false; //used so that form errors are shown only after the form has been submitted
     $scope.submit = function(contactform) {

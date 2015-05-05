@@ -54,7 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         "\nLocation: " . $_POST['projectLocation'] .
         "\nProject Highlight: " . $_POST['projectHighlight'] .
 
-        "\n\nDELIVERABLES" .
+        "\n\nDeliverables" .
         // "\n\nExterior: " . $_POST['projectExterior'] .
         // "\nInterior: " . $_POST['projectInterior'] .
         // "\nPlan: " . $_POST['projectPlan'] .
@@ -70,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         "\n\nStart Date: " . $_POST['scheduleStart'] .
         "\nFinal Images Deadline: " . $_POST['scheduleDeadline'] .
 
-        "\n\nWORKBACK SCHEDULE" .
+        "\n\nWorkback schedule" .
         "\n\nPreview 1 Date: " . $_POST['schedulePreview1'] .
         "\nPreview 2 Date: " . $_POST['schedulePreview2'] .
         "\nPreview 3 Date: " . $_POST['schedulePreview3'] .
@@ -94,27 +94,27 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         "\n\n\nWHO - THE TARGET AUDIENCE AND WHO IS INVOLVED" .
         "\n\nDescribe the Target Audience: " . $_POST['whoTarget'] .
 
-        "\n\nMAIN CONTACT" .
+        "\n\nMain Contact" .
         "\nName: " . $_POST['whoMainName'] .
         "\nEmail: " . $_POST['whoMainEmail'] .
         
-        "\n\nARCHITECT" .
+        "\n\nArchitect" .
         "\nName: " . $_POST['whoArchitectName'] .
         "\nEmail: " . $_POST['whoArchitectEmail'] .
         
-        "\n\nLANDSCAPE" .
+        "\n\nLandscape" .
         "\nName: " . $_POST['whoLandscapeName'] .
         "\nEmail: " . $_POST['whoLandscapeEmail'] .
         
-        "\n\nINTERIOR" .
+        "\n\nInterior" .
         "\nName: " . $_POST['whoInteriorName'] .
         "\nEmail: " . $_POST['whoInteriorEmail'] .
         
-        "\n\nBUILDER" .
+        "\n\nBuilder" .
         "\nName: " . $_POST['whoBuilderName'] .
         "\nEmail: " . $_POST['whoBuilderEmail'] .
         
-        "\n\nMARKETING AGENCY" .
+        "\n\nMarketing Agency" .
         "\nName: " . $_POST['whoMarketingName'] .
         "\nEmail: " . $_POST['whoMarketingEmail']
     ;

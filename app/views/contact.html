@@ -76,7 +76,30 @@
                 </div><!-- end/row -->
 
                 <h3 class="legend large">Deliverables <span class="base"> - Description (View/Day/Dusk/Season/Orientation/TBC)</span></h3>
-                <div class="clear">
+
+                
+                <div class="clear" ng-repeat="deliverable in formData.deliverables">
+                    <div class="form-group g-wide--1">
+                        <label class="label">Type</label>
+                        <select class="select" ng-model="deliverable.type" name="type">
+                            <option value="Exterior">Exterior</option>
+                            <option value="Interior">Interior</option>
+                            <option value="Plan">Plan</option>
+                            <option value="Aerial">Aerial</option>
+                        </select>
+                    </div>
+                    <div class="form-group g-wide--3 g-wide--last">
+                        <label class="label" for="description">Description</label>
+                        <input class="input-text" ng-model="deliverable.description" type="text" id="delDescription" name="Deldescription">
+                    </div>
+                    <button class="button--secondary" ng-show="$last" ng-click="removeDeliverable()" type="button">-</button>
+                </div><!-- end/row -->
+                <button class="button--secondary" ng-click="addDeliverable()" type="button">Add field</button>
+                <p>{{ formData.deliverables }}</p>
+
+
+
+                <!-- <div class="clear">
                     <div class="form-group g-wide--1" ng-init="formData.projectDelType1 = 'Exterior'">
                         <label class="label">Type</label>
                         <select class="select" ng-model="formData.projectDelType1" name="projectDelType1">
@@ -90,7 +113,7 @@
                         <label class="label" for="projectDelDescription1">Description</label>
                         <input class="input-text" ng-model="formData.projectDelDescription1" type="text" id="projectDelDescription1" name="projectDelDescription1">
                     </div>
-                </div><!-- end/row -->
+                </div> --><!-- end/row -->
                 <div class="clear">
                     <div class="form-group g-wide--4 g-wide--last">
                         <label class="label" for="projectAnimation">Animation</label>
