@@ -1,4 +1,5 @@
 <?php
+
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
 require_once 'phpmailer/PHPMailerAutoload.php';
@@ -22,7 +23,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         // empty($_POST['projectPlan']) ||
         // empty($_POST['projectAerial']) ||
         // empty($_POST['projectAnimation']) ||
-        empty($_POST['projectImgNumber']) ||
         empty($_POST['projectPeople']) ||
         empty($_POST['projectImgSize']) ||
 
