@@ -18,11 +18,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         empty($_POST['projectType']) ||
         empty($_POST['projectLocation']) ||
         empty($_POST['projectHighlight']) ||
-        // empty($_POST['projectExterior']) ||
-        // empty($_POST['projectInterior']) ||
-        // empty($_POST['projectPlan']) ||
-        // empty($_POST['projectAerial']) ||
-        // empty($_POST['projectAnimation']) ||
         empty($_POST['projectPeople']) ||
         empty($_POST['projectImgSize']) ||
 
@@ -55,11 +50,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         "\nProject Highlight: " . $_POST['projectHighlight'] .
 
         "\n\nDeliverables" .
-        // "\n\nExterior: " . $_POST['projectExterior'] .
-        // "\nInterior: " . $_POST['projectInterior'] .
-        // "\nPlan: " . $_POST['projectPlan'] .
-        // "\nAerial: " . $_POST['projectAerial'] .
-        "\nAnimation: " . $_POST['projectAnimation'] .
+       
+
+        "\n\nAnimation: " . $_POST['projectAnimation'] .
         "\nTotal No. Images: " . $_POST['projectImgNumber'] .
         
         "\n\nPeople: " . $_POST['projectPeople'] .

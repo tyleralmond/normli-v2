@@ -14,18 +14,18 @@ angular.module('normliV2App')
     $scope.formData = {}; //formData is an object holding the name, email, subject, and message
     
     $scope.formData.deliverables = [{ 
-        id: 'deliverable1',
+        id: 'id1',
         type: 'Exterior',
         description: ''
     },
     {
-        id: 'deliverable2',
+        id: 'id2',
         type: 'Interior',
         description: ''
     }];
     $scope.addDeliverable = function() {
     var newItemNo = $scope.formData.deliverables.length+1;
-    $scope.formData.deliverables.push({'id':'deliverable'+newItemNo});
+    $scope.formData.deliverables.push({'id':'id'+newItemNo});
     };
     $scope.removeDeliverable = function() {
     var lastItem = $scope.formData.deliverables.length-1;
