@@ -1,5 +1,12 @@
 <?php
 
+// foreach ($_POST['deliverables'] as $innerArray) {
+//     foreach ($innerArray as $key => $value) {
+//         echo "$key : $value \n";
+//     }
+// };
+
+
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
 require_once 'phpmailer/PHPMailerAutoload.php';
@@ -35,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $mail->FromName = $_POST['requestName'];
     $mail->AddAddress('tyler@tamedia.ca'); //recipient 
     $mail->Subject = "Quote request from " . $_POST['requestName'];
-    $mail->Body = 
+    $mail->Body =
         "Date: " . $_POST['requestDate'] .
         "\nName: " . $_POST['requestName'] .
         "\nEmail: " . $_POST['requestEmail'] .
@@ -49,10 +56,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         "\nLocation: " . $_POST['projectLocation'] .
         "\nProject Highlight: " . $_POST['projectHighlight'] .
 
-        "\n\nDeliverables" .
-       
+        "\n\nDeliverables\n";
 
-        "\n\nAnimation: " . $_POST['projectAnimation'] .
+        foreach ($_POST['deliverables'] as $innerArray) {
+            foreach ($innerArray as $key => $value) {
+                $mail->Body .= "$key: " . "$value \n";
+            }
+        };
+        $mail->Body .=       
+
+        "\nAnimation: " . $_POST['projectAnimation'] .
         "\nTotal No. Images: " . $_POST['projectImgNumber'] .
         
         "\n\nPeople: " . $_POST['projectPeople'] .
