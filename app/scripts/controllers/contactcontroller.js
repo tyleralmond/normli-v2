@@ -29,6 +29,9 @@ angular.module('normliV2App')
       $scope.formData.deliverables.push({});
     };
     $scope.removeDeliverable = function() {
+      if($scope.formData.deliverables.length<=0){
+        return false;
+      }
     var lastItem = $scope.formData.deliverables.length-1;
     $scope.formData.deliverables.splice(lastItem);
     };
