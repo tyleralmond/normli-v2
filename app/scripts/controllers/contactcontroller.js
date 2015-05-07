@@ -14,18 +14,16 @@ angular.module('normliV2App')
     $scope.formData = {}; //formData is an object holding the name, email, subject, and message
     
     $scope.formData.deliverables = [{ 
-        id: 'id1',
         type: 'Exterior',
         description: ''
     },
     {
-        id: 'id2',
         type: 'Interior',
         description: ''
     }];
     $scope.addDeliverable = function() {
     var newItemNo = $scope.formData.deliverables.length+1;
-    $scope.formData.deliverables.push({'id':'id'+newItemNo});
+    $scope.formData.deliverables.push({});
     };
     $scope.removeDeliverable = function() {
     var lastItem = $scope.formData.deliverables.length-1;
@@ -41,7 +39,7 @@ angular.module('normliV2App')
             $http({
                 method  : 'POST',
                 url     : 'contact-form.php',
-                data    : param($scope.formData),  //param method from jQuery
+                data    : $.param($scope.formData),  //param method from jQuery
                 headers : { 'Content-Type': 'application/x-www-form-urlencoded' }  //set the headers so angular passing info as form data (not request payload)
             }).success(function(data){
                 console.log(data);
@@ -63,15 +61,15 @@ angular.module('normliV2App')
     };
 
     // fix for JSON PHP problem
-    var param = function(data) {
-        var returnString = '';
-        for (var d in data){
-            if (data.hasOwnProperty(d)) {
-                returnString += d + '=' + data[d] + '&';
-            }
-        }
-        return returnString.slice( 0, returnString.length - 1 );
-    };
+    // var param = function(data) {
+    //     var returnString = '';
+    //     for (var d in data){
+    //         if (data.hasOwnProperty(d)) {
+    //             returnString += d + '=' + data[d] + '&';
+    //         }
+    //     }
+    //     return returnString.slice( 0, returnString.length - 1 );
+    // };
 
   });
 
