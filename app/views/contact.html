@@ -78,7 +78,7 @@
                 <h3 class="legend large">Deliverables <span class="base"> - Description (View/Day/Dusk/Season/Orientation/TBC)</span></h3>
 
                 
-                <div class="clear" ng-repeat="deliverable in formData.deliverables">
+                <div class="clear" ng-repeat="deliverable in formData.deliverables track by $index">
                     <div class="form-group g-wide--1">
                         <label class="label">Type</label>
                         <select class="select" ng-model="deliverable.type" name="type">
