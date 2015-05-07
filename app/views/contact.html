@@ -94,7 +94,7 @@
                     </div>
                     <button class="button--secondary" ng-show="$last" ng-click="removeDeliverable()" type="button">-</button>
                 </div><!-- end/row -->
-                <button class="button--secondary" ng-click="addDeliverable()" type="button">Add field</button>
+                <button class="button--secondary" ng-click="addDeliverable()" type="button" ng-disable="formData.deliverables.length>=10">Add field</button>
                 <p>{{ formData.deliverables }}</p>
 
 
