@@ -22,8 +22,11 @@ angular.module('normliV2App')
         description: ''
     }];
     $scope.addDeliverable = function() {
-    var newItemNo = $scope.formData.deliverables.length+1;
-    $scope.formData.deliverables.push({});
+      if($scope.formData.deliverables.length>=10){
+        return false;
+      }
+      var newItemNo = $scope.formData.deliverables.length+1;
+      $scope.formData.deliverables.push({});
     };
     $scope.removeDeliverable = function() {
     var lastItem = $scope.formData.deliverables.length-1;
