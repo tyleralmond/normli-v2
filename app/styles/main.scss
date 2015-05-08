@@ -259,7 +259,7 @@ main {
   @include media-query(medium) {
     width: 50%;
     float: left;
-    height: 350px;
+    height: 450px;
   }
 
 }
@@ -272,8 +272,9 @@ main {
 .hero--right {
   // width: 33.333%;
   background-image: url('../images/hero.jpg');
-  background-size: cover;
-  // background-attachment: fixed;
+  // background-size: cover;
+  background-attachment: fixed;
+  background-position: 100%;
   // box-shadow: inset 1px 4px 1px 0px rgba(0, 0, 0, 0.75);
 }
 
