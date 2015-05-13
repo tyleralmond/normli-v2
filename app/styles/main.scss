@@ -36,14 +36,6 @@ $z-header: 2;
     #BASE
 \*------------------------------------*/
 
-html {
-  box-sizing: border-box;
-}
-
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
 html,
 body {
   width: 100%;
@@ -88,11 +80,16 @@ main {
 
 // buttons - override WSK
 
+.button,
+.button--primary,
+.button--secondary {
+  transition: 150ms $animationEasing;
+}
+
 .button--primary {
   margin: $lineHeight*2 0;  
   background: #222;
   border-color: $color-border;
-  transition: 150ms $animationEasing;
 }
 
 
@@ -529,10 +526,6 @@ main {
   text-align: right;
 }
 
-// .form {
-//   margin-top: $lineHeight;
-// }
-
 .legend {
   padding-bottom: $lineHeight;
 }
@@ -583,6 +576,40 @@ main {
   box-shadow: none;
 }
 
+// add/remove deliverable buttons
+
+.deliverable__delete {
+  margin-top: -13px;
+  padding: 0 8px;
+  background: $color-primary;
+  border: 1px solid $color-main-bg;
+  float: right;
+
+  @include media-query(medium) {
+    position: absolute;
+    right: -30px;
+    bottom: 17px;
+  }
+
+  &:hover {
+    background: darken($color-primary, 20%);
+  }
+
+}
+
+.deliverable__add {
+  margin-top: 0;
+  margin-bottom: $lineHeight;
+  padding: 6px 16px;
+  border: 1px solid darken($color-border, 20%);
+}
+
+.deliverable__msg {
+  display: block;
+  margin-bottom: $lineHeight;
+}
+
+
 //success & error message
 
 .success-msg {
@@ -616,6 +643,9 @@ input.ng-invalid.ng-touched {
     #UTILS
 \*------------------------------------*/
 
+.pos-relative {
+  position: relative;
+}
 
 .bg-light {
   background: #444;
