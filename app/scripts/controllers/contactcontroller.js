@@ -13,27 +13,30 @@ angular.module('normliV2App')
     $scope.resultMessage = '';
     $scope.formData = {}; //formData is an object holding the name, email, subject, and message
     
+    // deliverables
     $scope.formData.deliverables = [{ 
         type: 'Exterior',
         description: ''
     },
     {
-        type: 'Interior',
+        type: 'Exterior',
         description: ''
     }];
+    // add deliverable
     $scope.addDeliverable = function() {
-      if($scope.formData.deliverables.length>=10){
-        return false;
-      }
-      var newItemNo = $scope.formData.deliverables.length+1;
-      $scope.formData.deliverables.push({});
+        if($scope.formData.deliverables.length>=10){
+            return false;
+        }
+        var newItemNo = $scope.formData.deliverables.length+1;
+        $scope.formData.deliverables.push({type: 'Exterior', description: ''});
     };
+    // remove deliverable
     $scope.removeDeliverable = function() {
-      if($scope.formData.deliverables.length<=0){
-        return false;
-      }
-    var lastItem = $scope.formData.deliverables.length-1;
-    $scope.formData.deliverables.splice(lastItem);
+        if($scope.formData.deliverables.length<=0){
+            return false;
+        }
+        var lastItem = $scope.formData.deliverables.length-1;
+        $scope.formData.deliverables.splice(lastItem);
     };
 
     $scope.submitButtonDisabled = false;
@@ -45,7 +48,7 @@ angular.module('normliV2App')
             $http({
                 method  : 'POST',
                 url     : 'contact-form.php',
-                data    : $.param(angular.copy($scope.formData)),  //param method from jQuery
+                data    : $.param($scope.formData),  //param method from jQuery
                 headers : { 'Content-Type': 'application/x-www-form-urlencoded' }  //set the headers so angular passing info as form data (not request payload)
             }).success(function(data){
                 console.log(data);
