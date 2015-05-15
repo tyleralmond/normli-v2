@@ -183,6 +183,94 @@ main {
 }
 
 
+//slide
+
+.nganimate-slide {
+  transition: 200ms $animationEasing;
+}
+
+.nganimate-slide.ng-enter {
+  opacity: 0;
+  transform: translate3d(-15px, 0, 0);
+}
+
+.nganimate-slide.ng-enter.ng-enter-active {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.nganimate-slide.ng-leave {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.nganimate-slide.ng-leave.ng-leave-active {
+  opacity: 0;
+  transform: translate3d(15px, 0, 0);
+}
+
+
+// fade
+
+.nganimate-fade {
+  transition: 200ms $animationEasing;
+}
+
+.nganimate-fade.ng-enter {
+  opacity: 0;
+  transform: translate3d(-15px, 0, 0);
+}
+
+.nganimate-fade.ng-enter.ng-enter-active {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.nganimate-fade.ng-leave {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.nganimate-fade.ng-leave.ng-leave-active {
+  opacity: 0;
+  transform: translate3d(15px, 0, 0);
+}
+
+// fade show/hide
+
+.nganimate-fade.ng-hide {
+  opacity: 0;
+}
+
+.nganimate-fade.ng-show {
+  animation: fadeIn 300ms $animationEasing;
+}
+
+
+
+
+
+
+/*------------------------------------*\
+    #ANIMATIONS
+\*------------------------------------*/
+
+.animate-fadein {
+  animation: fadeIn 300ms $animationEasing;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+
 
 
 
@@ -195,7 +283,8 @@ main {
   width: 100%;
   z-index: $z-header;
   top: 0;
-  background: $color-primary;
+  // background: $color-primary;
+  background: rgba(222, 30, 38, 0.9);
 }
 
 .nav-main__list {
@@ -621,6 +710,16 @@ main {
   padding: $lineHeight*2;
   color: green;
   font-size: $fontLarge;
+  animation: successMsg 300ms $animationEasing;
+}
+
+@keyframes successMsg {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .error-msg {
