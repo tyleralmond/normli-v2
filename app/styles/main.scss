@@ -428,6 +428,25 @@ main {
 
 }
 
+// autocomplete plugin override
+
+.autocomplete {
+  
+  ul {
+    padding: 0;
+  }
+
+  li {
+    background: #333;
+
+    &::before {
+      display: none; /* hide bullets */
+    }
+
+  }
+
+}
+
 
 
 

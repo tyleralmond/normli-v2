@@ -18,7 +18,8 @@ angular
     'ngTouch',
     'ngAria',
     'angular-loading-bar',
-    'angucomplete-alt'
+    'angucomplete-alt',
+    'autocomplete'
   ])
   .config(function ($routeProvider) {
     $routeProvider
