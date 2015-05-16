@@ -209,6 +209,13 @@ main {
   transform: translate3d(15px, 0, 0);
 }
 
+.nganimate-slide.ng-enter-stagger {
+  transition-delay: 0.1s;
+  /* in case the stagger doesn't work then the duration value
+   must be set to 0 to avoid an accidental CSS inheritance */
+  transition-duration: 0s;
+}
+
 
 // fade
 
@@ -269,6 +276,31 @@ main {
 }
 
 
+
+
+
+/*------------------------------------*\
+    #LOADING BAR - OVERRIDE PLUGIN
+\*------------------------------------*/
+
+#loading-bar .bar {
+  background: #fff;
+  top: $header-height;
+  height: 2px;
+}
+
+/* Fancy blur effect */
+#loading-bar .peg {
+  box-shadow: #FFF 1px 0 6px 1px;
+}
+
+#loading-bar-spinner .spinner-icon {
+  width: 30px;
+  height: 30px;
+  border-top-color:  #FFF;
+  border-left-color: #FFF;
+  border-radius: 50%;
+}
 
 
 
