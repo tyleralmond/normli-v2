@@ -9,8 +9,18 @@
       <form class="instagram-search" ng-submit="search()">
         <img src="images/search.svg" alt="search icon">
         <label class="visuallyhidden" for="search">Search our instagram hash tag</label>
-        <input class="instagram-search__input" placeholder="SEARCH #HASHTAG" id="search" type="search" ng-model="searchTerm"/>
+        <!-- <input class="instagram-search__input" placeholder="SEARCH #HASHTAG" id="search" type="search" ng-model="searchTerm"/> -->
         <!-- <button class="instagram-search__button" type="submit">Search</button> -->      
+
+        <angucomplete-alt id="search"
+              placeholder="SEARCH #HASHTAG"
+              input-class="instagram-search__input"
+              pause="100"
+              selected-object="selectedHash"
+              local-data="hashtags"
+              search-fields="tag"
+              title-field="tag"
+              minlength="0"/>
       </form>
     </div>
 
