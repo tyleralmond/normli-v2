@@ -36,10 +36,10 @@ angular.module('normliV2App')
 //          $log.debug('show more: ',$scope.showMore);
 
 //          $log.warn(response);
-        },
-        function error(error){
-//          throw new Error(error);
         }
+        // function error(error){
+        //  throw new Error(error);
+        // }
       );
     };
 
