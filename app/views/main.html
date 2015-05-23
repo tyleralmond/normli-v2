@@ -42,13 +42,15 @@
   <section>
 
     <!-- no search results msg -->
-    <div class="container" ng-hide="pics.length">
+<!--     <div class="container" ng-hide="pics.length">
       <h2>No results found</h2>
-    </div>
+    </div> -->
 
 
     <!-- Instagram feed -->
     <ul class="instagram-feed">
+      <!-- no results message -->
+      <li ng-if="pics.length === 0"><h2>No results found</h2></li>
       <li class="instagram-feed__item nganimate-slide" ng-repeat="p in pics">    
         <img class="instagram-feed__img" ng-src="{{p.images.standard_resolution.url}}"/>      
         <div class="instagram-feed__item-hover">
