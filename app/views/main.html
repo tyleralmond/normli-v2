@@ -11,23 +11,12 @@
         <label class="visuallyhidden" for="search">Search our instagram hash tag</label>
         <!-- <input class="instagram-search__input" placeholder="SEARCH #HASHTAG" id="search" type="search" ng-model="searchTerm"/> -->
         <!-- <button class="instagram-search__button" type="submit">Search</button> -->      
-
-<!--         <angucomplete-alt id="search"
-              placeholder="SEARCH #HASHTAG"
-              input-class="instagram-search__input"
-              pause="100"
-              selected-object="selectedHash"
-              local-data="hashtags"
-              search-fields="tag"
-              title-field="tag"
-              minlength="0"/> -->
-              <autocomplete 
-              ng-model="searchTerm"
-              data="hashtags"
-              attr-placeholder="SEARCH #HASHTAG"
-              attr-input-class="instagram-search__input"
-              attr-input-id="search"
-              click-activation="true"/>
+        <autocomplete 
+        ng-model="searchTerm"
+        data="hashtags"
+        attr-placeholder="SEARCH #HASHTAG"
+        attr-input-class="instagram-search__input"
+        attr-input-id="search"/>
       </form>
     </div>
 

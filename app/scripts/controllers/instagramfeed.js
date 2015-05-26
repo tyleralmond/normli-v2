@@ -49,23 +49,14 @@ angular.module('normliV2App')
       $scope.getMore();
     };
 
-    $scope.search();    
+    $scope.search();
     // autocomplete search terms
     $scope.hashtags = [
-      "normandthegang",
-      "alwaysbetter",
-      "rendering",
-      "visualization",
-      "rendercontest"
+      'normandthegang',
+      'alwaysbetter',
+      'rendering',
+      'visualization',
+      'rendercontest'
     ];
-    // $scope.hashtags = [
-    //   {tag: 'normandthegang'},
-    //   {tag: 'alwaysbetter'},
-    //   {tag: 'rendering'},
-    //   {tag: 'visualization'},
-    //   {tag: 'rendercontest'},
-    //   {tag: 'condos'},
-    //   {tag: 'rendering'}
-    // ];
 
   });

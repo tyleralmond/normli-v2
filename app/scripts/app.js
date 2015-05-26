@@ -17,9 +17,8 @@ angular
     'ngSanitize',
     'ngTouch',
     'ngAria',
-    'angular-loading-bar',
-    'angucomplete-alt',
-    'autocomplete'
+    'autocomplete',
+    'angular-loading-bar'
   ])
   .config(function ($routeProvider) {
     $routeProvider
